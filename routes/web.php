@@ -21,3 +21,6 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/haalathu', 'HomeController@app')->name('haalathu');
+Route::get('/haalathu/register', 'haalathuRegsController@newuser')->name('haalathuRegs');
+
+
