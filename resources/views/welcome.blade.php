@@ -41,41 +41,49 @@
             margin: 0;
         }
 
-        #basmala {
+        .basmala {
             font-family: "A_Bismillah";
             font-size: 50px;
             text-align: center;
 
         }
 
-        #ar {
+        .ar {
             font-family: "Calibri";
-            font-size: 20px;
+            font-size: 15px;
 
         }
 
-        #mv {
+        .mv {
             font-family: "MV Typewriter";
-            /* text-align: "justify"; */
             text-align: justify;
             text-indent: 50px;
-            padding-left: 50px;
-            padding-right: 50px;
+            padding-left: 5px;
+            padding-right: 5px;
             line-height: 2.5;
-            font-size: 15px;
+        }
+
+        .dhi {
+
+            font-family: "MV Typewriter";
+            text-align: justify;
         }
 
         .salaam {
-            font-size: 20px;
             text-align: center;
         }
 
         .mvdate {
             font-family: "MV Typewriter";
-            font-size: 15px;
             text-align: center;
 
 
+        }
+
+        .mvdate,
+        .dhi,
+        .mv {
+            font-size: 10px;
         }
     </style>
     <style>
@@ -93,11 +101,11 @@
 
         .left,
         .right {
-            width: 20%;
+            width: 15%;
         }
 
         .middle {
-            width: 60%;
+            width: 70%;
         }
 
         /* Clear floats after the columns */
@@ -106,149 +114,60 @@
             display: table;
             clear: both;
         }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 5px;
+        }
     </style>
 </head>
 
 <body>
-    <!-- <div id="app"> -->
-
-    <!-- Navbar here -->
-    <!-- <nav class="navbar navbar-light" style="background-color: #E3E5F7;"> -->
-    <!-- Navbar content -->
-    <!-- <a class="navbar-brand" href="{{ url('/') }}">
-                <div><img src="img/png/round_logo.png" style="height: 35px;" alt=""></div>
-            </a>
-
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-            @guest
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-            </li>
-            @if (Route::has('register'))
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-            </li>
-            @endif
-            @else
-            <li class="nav-item dropdown">
-                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    {{ Auth::user()->name }} <span class="caret"></span>
-                </a>
-                
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
-                </a>
-                
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
-            </div>
-        </li>
-        @endguest
-    </nav> -->
 
     <main>
         <div class="row">
-            <div class="column left"></div>
-            <div class="column middle">
-                <div id="basmala">
-                    <span>a</span>
-                </div>
-                <div class="salaam">
-                    <span id="ar">السلام عليكم ورحمة الله وبركاته</span>
-                </div>
-                <div id="mv">
+            <a href="/">
+                <img src="\img\png\round_logo.png" style="height: 50px; 
+                padding:5px; 
+                display: block;
+                margin-left: auto;
+                margin-right: auto;" alt="">
+            </a>
+        </div>
 
-                    <p>
-
-                        <span id="ar">
-                            إن الحمد لله نحمده ونستعينه ، ونعوذ بالله من شرور
-                            أنفسنا ومن سيئات أعمالنا من يهده الله فلا مضل
-                            ومن يضلل فلا هادي له ، وأشهد أن لا إله إلا الله وحده لا شريك له
-                            وأشهد أن محمدا عبده ورسوله صلى الله عليه
-                            وعلى آله وأصحابه وسلم تسليما كثيرا، وبعد!
-                        </span>
-                    </p>
-
-                    <p>
-                        އާދެ،
-                        މިދުނިޔޭގެ ޙަޔާތަކީ ވަރަށް ކުރު އެއްޗެކެވެ.
-                        މިޙަޔާތުގެ ބޭނުން އެންމެ ފުރިހަމަގޮތުގައި
-                        ހިފޭނީ ވަރަށް މަދުބަޔަކަށެވެ.
-                        އެހެންކަމުން މިޙަޔާތުގެ
-                        ބޭނުން ފުރިހަމަގޮތުގައި ހިފުމަށް އަވަސްވެގަންނަމާ ހިނގާށެވެ.
-                        މިކަން ޙާސިލްވާނީ، ތިޔަ އެންމެ
-                        ބޭފުޅުންގެ އެއްބާރުލުމާއި އެހީތެރިކަން ލިބިގެންނެވެ.
-                        އަޅުގަނޑުގެ ޙަޔާތުގެ ދުވަސްތައް
-                        ވޭތިކުރަން ޖެހިފައި މިއޮތީ ތިޔަބޭފުންނާ އެކުގައިއެވެ.
-                        ތިޔަބޭފުޅުންގެ މުދަލާއި މިލުކުގައިވާ ތަކެތީގެ
-                        ތެރޭގައި އަޅުގަނޑުގެ ދިރިއުޅުން މިވޭތިކުރާ ކުރުމުގައި،
-                        ތިޔައިގެ އެންމެ ބޭފުޅުންގެ ޙައްޤުތަކަށް، ފަރުވާކުޑަކުރެވުމުގެ
-                        ސަބަބުންނާއި އީމާންތެރިކަން ބަލިކަށިކަމުގެ ސަބަބުން،
-                        އަރައިގަނެވިފައި ވުމީ ވަރަށް ގާތްކަމެކެވެ.
-                        އެކަން ތިޔަބޭފުޅުންނަށް އިޙުސާސްނުވެ،
-                        ފާހަގަނުކުރެވި އޮތުމަކީ އެކަން އަޅުގަނޑުގެ
-                        ފަރާތުން ނުވެއޮތްކަމުގެ ދަލީލެއްނޫނެވެ.
-                        ފާއިތުވެ ދިޔަތަން ވޭތުވެފައިވަނީ
-                        އެފަދައިންނެވެ. ވިސްނާއިލެވުމާކާ ނުލައެވެ.
-
-
-                    </p>
-                    <p>
-                        ވިމާ، އެއްވެސް ބޭފުޅެއްގެ ޙައްޤަކަށް އަޅުގަނޑަށް
-                        އަރައިގަނެވިފައި ވާނަމަ، އެކަމުގެ ބަދަލު
-                        ދިނުމަކީ އަޅުގަނޑުގެ މައްޗަށް އޮތް ވާޖިބެކެވެ.
-                        އެވާޖިބު އަދާކުރުމަށް އަޅުގަނޑު މިހުރީ ތައްޔާރަށަވެ.
-
-                        އެހެންނަމަވެސް، އަޅުގަނޑުގެ ފުށުން ލިބިފައިވާ ގެއްލުންތައް
-                        މާޢާފުކޮށްދެއްވުން އެއީ ތިޔަބޭފުޅުންގެ ދީލަތިކަމެވެ.
-                        ތިބާގެ ޙައްޤަށް އަރައިގަނެވިފައި
-                        ވުމުގެ ސަބަބުން ލިބުނުގެއްލުމުގެ ދެގުނަ އިތުރަށް
-                        ތިބާއަށް ދެއްވާށިއެވެ! ތިބާގެ މުދަލުގައި
-                        <span id="ar">
-                            ﷲ
-                        </span>
-                        ބަރަކާތް ލައްވައި،
-                        ތިބާގެ ޢުމުރު ދިގުކުރައްވައި، ހެޔޮޢަމަލު ގިނަ ކުރުމުގެ
-                        ތަޢުފީޤު ތިބާއަށް މިންވަރުކޮށްދެއްވާށިއެވެ.
-                        <span id="ar">
-
-                            آمين!
-                        </span>
-                    </p>
-                    <div class="mvdate">
-
-                        25 ނޮވެމްބަރު 2012
+        <div class="row">
+            <div class="column left">
+                <div class="dhi">
+                    <h4>
+                        ތަރައްޤީ ކުރެވެމުންދާ އެޕުތައް...
+                    </h4>
+                    <div class="filaa">
+                        <a href="\haalathu">
+                            <img src="\img\logo\logo.png" width="30" height="30" alt="">
+                        </a>
                     </div>
                 </div>
+            </div>
+            <div class="column middle">
 
 
-                <!-- Haalthu App  -->
-
-                <!-- <div class="row justify-content-center">
-
-                    
-                </div> -->
             </div>
             <div class="column right">
-                <div id="mv">
-                    <h3>
-                        ތަރައްޤީކުރެވެމުންދާ އެޕުތައް...
-                        </h3>
-                        <div class="filaa">
-                            <a href="\haalathu">
-                                <img src="\img\logo\logo.png" width="30" height="30" alt="">
-                            </a>
-                        </div>
-
-                </div>
+                <ul class="dhi">
+                    <li>ތަޢާރަފު</li>
+                    <li>
+                        <a href="/bayaan">
+                            ބަޔާން
+                        </a>
+                    </li>
+                    <li>އޮޅުންފިލުވައިދޭ ލިޔުން</li>
+                    <li>ޚިޔާލު</li>
+                    <li></li>
+                </ul>
             </div>
         </div>
+
     </main>
 </body>
 

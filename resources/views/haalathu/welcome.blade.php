@@ -28,14 +28,14 @@
     <style>
         html,
         body {
-            background-color: #fff;
+            /* background-color: #fff; */
             background-image: url("/img/B15_75op.png");
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center;
             background-size: cover;
-            color: #636b6f;
-            font-family: "dhiFont", 'Nunito', sans-serif;
+            /* color: #636b6f; */
+            font-family: "MV Typewriter", 'Nunito', sans-serif;
             font-weight: 200;
             height: 100vh;
             margin: 0;
