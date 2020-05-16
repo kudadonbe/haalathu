@@ -20,7 +20,7 @@
                 <div class="pagename dhi">
                     ވިޔަފާރިގެތައް
                 </div>
-                <div class="pageimage">
+                <div class="pageimage" >
                     <img src="\img\png\haalathu\shop.png" style="height:70px;" alt="">
                 </div>
             </a>

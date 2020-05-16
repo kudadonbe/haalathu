@@ -76,6 +76,7 @@
             margin: 10px 0;
 
         }
+
         * {
             box-sizing: border-box;
         }
@@ -84,6 +85,8 @@
         .col {
             width: 100%;
             padding: 5px;
+            text-align: center;
+
             /* background-color: beige; for dev */
             /* float: left; */
             /* height: 300px; */
@@ -152,15 +155,26 @@
             display: flex;
             /* padding-bottom: 3px; */
         }
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
     </style>
 </head>
 
 <body>
 
-    <div class="row justify-content-center">
-        <a href="/haalathu">
-            <div style="padding: 10px;"><img src="\img\png\haLogo.png" style="height: 100px;"></div>
-        </a>
+    <div class="row">
+        <div class="col">
+
+            <a href="/haalathu">
+                <div style="padding: 10px;">
+                    <img src="\img\png\haLogo.png" style="height: 100px; padding: 5px;">
+                </div>
+            </a>
+        </div>
     </div>
 
     </div>
@@ -168,7 +182,7 @@
     <main class="">
         <div class="">
             <div class="row">
-                <style>
+                <!-- <style>
                     .rah {
                         background-color: blue;
                     }
@@ -182,7 +196,8 @@
                         background-color: red;
 
                     }
-                </style>
+                </style> -->
+                <div class="col-3"></div>
                 <div class="col geybisee">
                     <div class="pagename dhi">
                         ގޭބިސީތައް
@@ -217,6 +232,7 @@
                     </a>
 
                 </div>
+                <div class="col-3"></div>
 
 
             </div>

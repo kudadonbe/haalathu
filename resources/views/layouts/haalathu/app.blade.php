@@ -56,6 +56,7 @@
             /* float: left; */
             /* height: 300px; */
             /* Should be removed. Only for demonstration */
+           
         }
 
         .col-1 {
@@ -179,7 +180,7 @@
     <nav class="navbar">
         <div class="row barnav">
 
-            <div class="col right">
+            <div class="col">
                 <div class="row userinfo">
                     <div class="col-2 userlogo">
                         <img src="{{Auth::user()->user_img}}" style="height: 30px;">
@@ -189,16 +190,16 @@
                     </div>
                 </div>
             </div>
-            <div class="col middle">
+            <div class="col">
                 <a href="/haalathu">
-                    <img src="\img\png\haLogo.png" style="height: 50px; 
-                padding:5px; 
-                display: block;
-                margin-left: auto;
-                margin-right: auto;" alt="">
+                    <img src="\img\png\haLogo.png" style="height: 50px;
+                        padding:5px; 
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" alt="">
                 </a>
             </div>
-            <div class="col left">
+            <div class="col">
                 <div class="row">
                     <div class="col"></div>
                     <div class="col-2">
