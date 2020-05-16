@@ -94,7 +94,7 @@
 
             <div class="row justify-content-center">
 
-                <form action="">
+                <form action="/haalathu/home">
 
                     <input type="text" placeholder="އައިޑީ ކާޑު ނަންބަރު"><br>
                     <input type="password" placeholder="ޕާސްވޯޑު"><br>

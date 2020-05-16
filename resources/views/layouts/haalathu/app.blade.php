@@ -28,10 +28,10 @@
     <style>
         html,
         body {
-            /* background-color: #fff; */
+            background-color:darkgray;
             background-image: url("/img/B15_75op.png");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+            /* background-repeat: no-repeat; */
+            background-attachment:fixed;
             background-position: center;
             background-size: cover;
             color: black;
@@ -46,42 +46,58 @@
             box-sizing: border-box;
         }
 
-        /* Create three unequal columns that floats next to each other */
-        .column {
-            float: left;
-            padding: 10px;
+        /* Create three unequal cols that floats next to each other */
+        .col {
+            width: 100%;
+            padding: 5px;
+            /* background-color: beige; for dev */
+            /* float: left; */
             /* height: 300px; */
             /* Should be removed. Only for demonstration */
         }
-
-        .left,
-        .right {
-            width: 30%;
+        .col-1{
+            width: 8.33%;
         }
-
-
-        .middle {
-            width: 40%;
+        .col-2{
+            width: 16.6667%;
         }
-
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
+        .col-3{
+            width: 25%;
         }
-
-        .left {
-            /* css for content left */
-            color: black;
+        .col-4{
+            width: 33%;
         }
-
-        .right {
-            /* css for content right */
-            color: black;
-
+        .col-5{
+            width: 41.667%;
         }
-
+        .col-6{
+            width: 50%;
+        }
+        .col-7{
+            width: 58.33%;
+        }
+        .col-8{
+            width: 66.6667%;
+        }
+        .col-9{
+            width: 75%;
+        }
+        .col-10{
+            width: 83%;
+        }
+        .col-11{
+            width: 91.667%;
+        }
+        .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11{
+            padding: 5px;
+        }
+        
+        .row {
+            display: flex;
+            /* padding-bottom: 3px; */
+        }
+                
+        
         ul {
             list-style-type: none;
             margin: 0;
@@ -96,20 +112,49 @@
 
             font-family: "MV Typewriter";
         }
+        .heading{
+            background-color: inherit;
+            color:navy;
+        }
+        .reptype{
+            background-color:burlywood;
+        }
+        .owner{
+            background-color: aquamarine;
+        }
+        .ppl{
+            background-color:darkslateblue;
+        }
+        .goods {
+            background-color:lightpink;
+
+        }
+        .repnametext{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .ownername{
+            font-weight: bold;
+
+        }
     </style>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="row barnav">
-
-            <div class="column left">
-                <a href="">
-                    <img src="\img\png\logout.png" style="height: 30px;" alt="">
-                </a>
+                    
+            <div class="col right">
+                <div class="row userinfo">
+                    <div class="col-2 userlogo">
+                        <img src="\img\png\round_logo.png" style="height: 30px;">
+                    </div>
+                    <div class="col username">
+                        ޙުސައިން ޝަރީފު
+                    </div>
+                </div>
             </div>
-
-            <div class="column middle">
+            <div class="col middle">
                 <a href="/haalathu">
                     <img src="\img\png\haLogo.png" style="height: 50px; 
                 padding:5px; 
@@ -118,13 +163,13 @@
                 margin-right: auto;" alt="">
                 </a>
             </div>
-            <div class="column right">
-                <div class="userinfo">
-                    <div class="userlogo">
-                        <img src="\img\png\round_logo.png" style="height: 30px;">
-                    </div>
-                    <div class="username">
-                        ޙުސައިން ޝަރީފު
+            <div class="col left">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col-2">
+                        <a href="">
+                            <img src="\img\png\logout.png" style="height: 30px;" alt="">
+                        </a>
                     </div>
                 </div>
             </div>
