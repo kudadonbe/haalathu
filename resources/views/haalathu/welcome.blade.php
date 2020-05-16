@@ -22,7 +22,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
 
     <!-- Styles -->
     <style>
@@ -76,42 +76,152 @@
             margin: 10px 0;
 
         }
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create three unequal cols that floats next to each other */
+        .col {
+            width: 100%;
+            padding: 5px;
+            /* background-color: beige; for dev */
+            /* float: left; */
+            /* height: 300px; */
+            /* Should be removed. Only for demonstration */
+        }
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.6667%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33%;
+        }
+
+        .col-5 {
+            width: 41.667%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.6667%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83%;
+        }
+
+        .col-11 {
+            width: 91.667%;
+        }
+
+        .col-1,
+        .col-2,
+        .col-3,
+        .col-4,
+        .col-5,
+        .col-6,
+        .col-7,
+        .col-8,
+        .col-9,
+        .col-10,
+        .col-11 {
+            padding: 5px;
+        }
+
+        .row {
+            display: flex;
+            /* padding-bottom: 3px; */
+        }
     </style>
 </head>
 
 <body>
-    <div id="app">
-        <div class="container">
-            <div class="row justify-content-center">
-                <a href="/haalathu">
-                    <div style="padding: 10px;"><img src="\img\png\haLogo.png" style="height: 100px;"></div>
-                </a>
+
+    <div class="row justify-content-center">
+        <a href="/haalathu">
+            <div style="padding: 10px;"><img src="\img\png\haLogo.png" style="height: 100px;"></div>
+        </a>
+    </div>
+
+    </div>
+
+    <main class="">
+        <div class="">
+            <div class="row">
+                <style>
+                    .rah {
+                        background-color: blue;
+                    }
+
+                    .geybisee {
+                        background-color: orange;
+
+                    }
+
+                    .viyaa {
+                        background-color: red;
+
+                    }
+                </style>
+                <div class="col geybisee">
+                    <div class="pagename dhi">
+                        ގޭބިސީތައް
+                    </div>
+                    <a href="/haalathu/hreport">
+
+                        <div class="pageimage">
+                            <img src="\img\png\haalathu\home.png" style="height:70px;" alt="">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col viyaa">
+
+                    <div class="pagename dhi">
+                        ވިޔަފާރިގެތައް
+                    </div>
+                    <a href="/haalathu/sreport">
+                        <div class="pageimage">
+                            <img src="\img\png\haalathu\shop.png" style="height:70px;" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="col rah">
+                    <div class="pagename dhi">
+                        މުޅި ރަށް
+                    </div>
+                    <a href="">
+                        <div class="pageimage">
+                            <img src="\img\png\haalathu\island.png" style="height:70px; padding:5px" alt="">
+                        </div>
+                    </a>
+
+                </div>
+
+
             </div>
 
         </div>
-
-        <main class="py-4">
-
-            <div class="row justify-content-center">
-
-                <form action="/haalathu/home">
-
-                    <input type="text" placeholder="އައިޑީ ކާޑު ނަންބަރު"><br>
-                    <input type="password" placeholder="ޕާސްވޯޑު"><br>
-                    <button>login</button>
-
-                    <!-- <textarea name="" id="" cols="20" rows="1" placeholder="އިޑީ ކާޑު ނަންބަރު"></textarea><br> -->
-                    <!-- <textarea name="" id="" cols="20" rows="1" placeholder="ޕާސްވޯޑު"></textarea><br> -->
-
-                </form>
-
-            </div>
-            <!-- <div class="row justify-content-center">
-            <form action="/haalathu/register">
-            <button>ރަޖިސްޓްރީ ވުމަށް</button>
-        </form>
-    </div> -->
-    </div>
     </main>
 </body>
 

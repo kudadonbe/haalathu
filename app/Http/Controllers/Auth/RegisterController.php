@@ -49,11 +49,14 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        
         return Validator::make($data, [
+            'nid' => ['required', 'string', 'max:255', 'unique:users'],
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'user_img' => ['required', 'image'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+            ]);
     }
 
     /**
@@ -64,9 +67,14 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $imagePath = request('user_img')->store('uploads', 'public');
+        $imagePath = '/storage/'.$imagePath;
+
         return User::create([
+            'nid' => $data['nid'],
             'name' => $data['name'],
             'email' => $data['email'],
+            'user_img' => $imagePath,
             'password' => Hash::make($data['password']),
         ]);
     }

@@ -35,7 +35,7 @@
             background-position: center;
             background-size: cover;
             color: #636b6f;
-            font-family: "dhiFont", 'Nunito', sans-serif;
+            font-family: "MV Typewriter", 'Nunito', sans-serif;
             font-weight: 200;
             height: 100vh;
             margin: 0;
@@ -139,6 +139,8 @@
                 @endif
                 @else
                 <li class="">
+                
+                    <img src="{{Auth::user()->user_img}}" style="height: 30px;" alt="">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
@@ -174,8 +176,10 @@
                     <h4>
                         ތަރައްޤީ ކުރެވެމުންދާ އެޕުތައް...
                     </h4>
+                    
                     <div class="filaa">
                         <a href="\haalathu">
+                        
                             <img src="\img\logo\logo.png" width="30" height="30" alt="">
                         </a>
                     </div>
@@ -190,7 +194,7 @@
                     <li>ތަޢާރަފު</li>
                     <li>
                         <a href="/bayaan">
-                            ބަޔާން
+                            އިޤުރާރު
                         </a>
                     </li>
                     <li>އޮޅުންފިލުވައިދޭ ލިޔުން</li>

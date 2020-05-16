@@ -21,10 +21,10 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/haalathu', 'PublicController@haalathu')->name('haalathu');
-Route::get('/haalathu/home', 'PublicController@index')->name('haalathu.home');
-Route::get('/haalathu/{report}', 'PublicController@report')->name('haalathu.hreport');
-Route::get('/bayaan', 'PublicController@bayaan')->name('ބަޔަަނ');
+Route::get('/haalathu/home', 'haalathuController@index')->name('haalathu.home');
+Route::get('/bayaan', 'PublicController@bayaan')->name('iquraaru');
 Route::get('/haalathu/register', 'PublicController@newuser')->name('haalathuRegs');
+Route::get('/haalathu/{report}', 'haalathuController@report')->name('haalathu.report');
 
 
 
