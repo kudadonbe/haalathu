@@ -16,6 +16,10 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script>
+
+
+    </script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -29,7 +33,7 @@
         html,
         body {
             /* background-color: #fff; */
-            background-image: url("/img/B15_75op.png");
+            /* background-image: url("/img/svg/haWell.svg"); */
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center;
@@ -155,6 +159,7 @@
             display: flex;
             /* padding-bottom: 3px; */
         }
+
         img {
             display: block;
             margin-left: auto;
@@ -203,15 +208,12 @@
                         ގޭބިސީތައް
                     </div>
                     <a href="/haalathu/hreport">
-
                         <div class="pageimage">
                             <img src="\img\png\haalathu\home.png" style="height:70px;" alt="">
                         </div>
                     </a>
                 </div>
-
                 <div class="col viyaa">
-
                     <div class="pagename dhi">
                         ވިޔަފާރިގެތައް
                     </div>
@@ -221,22 +223,18 @@
                         </div>
                     </a>
                 </div>
-                <div class="col rah">
+                <!-- <div class="col rah">
                     <div class="pagename dhi">
                         މުޅި ރަށް
                     </div>
                     <a href="">
                         <div class="pageimage">
-                            <img src="\img\png\haalathu\island.png" style="height:70px; padding:5px" alt="">
+                            <img id="rah" onmousemove="invColor()" onmouseout="oriColor()" src="\img\png\haalathu\island.png" style="height:70px; padding:5px" alt="">
                         </div>
                     </a>
-
-                </div>
+                </div> -->
                 <div class="col-3"></div>
-
-
             </div>
-
         </div>
     </main>
 </body>

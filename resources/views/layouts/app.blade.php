@@ -50,23 +50,16 @@
 
         .ar {
             font-family: "Calibri";
-            font-size: 15px;
+            font-size: 20px;
 
         }
 
         .mv {
-            font-family: "MV Typewriter";
             text-align: justify;
             text-indent: 50px;
             padding-left: 5px;
             padding-right: 5px;
             line-height: 2.5;
-        }
-
-        .dhi {
-
-            font-family: "MV Typewriter";
-            text-align: justify;
         }
 
         .salaam {
@@ -83,7 +76,8 @@
         .mvdate,
         .dhi,
         .mv {
-            font-size: 10px;
+            font-family: "MV Typewriter";
+
         }
     </style>
     <style>
@@ -92,33 +86,192 @@
         }
 
         /* Create three unequal columns that floats next to each other */
-        .column {
-            float: left;
-            padding: 10px;
-            height: 300px;
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create three unequal cols that floats next to each other */
+        .col {
+            width: 100%;
+            padding: 5px;
+            /* background-color: beige; for dev */
+            /* float: left; */
+            /* height: 300px; */
             /* Should be removed. Only for demonstration */
+
         }
 
-        .left,
-        .right {
-            width: 15%;
+        .col-1 {
+            width: 8.33%;
         }
 
-        .middle {
-            width: 70%;
+        .col-2 {
+            width: 16.6667%;
         }
 
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
+        .col-3 {
+            width: 25%;
         }
+
+        .col-4 {
+            width: 33%;
+        }
+
+        .col-5 {
+            width: 41.667%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.6667%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83%;
+        }
+
+        .col-11 {
+            width: 91.667%;
+        }
+
+        .col-1,
+        .col-2,
+        .col-3,
+        .col-4,
+        .col-5,
+        .col-6,
+        .col-7,
+        .col-8,
+        .col-9,
+        .col-10,
+        .col-11 {
+            padding: 5px;
+        }
+
+        .row {
+            display: flex;
+            /* padding-bottom: 3px; */
+        }
+
 
         ul {
             list-style-type: none;
             margin: 0;
             padding: 5px;
+        }
+
+        .barnav {
+            background-color: #A0D2F3;
+        }
+
+
+
+        .heading {
+            background-color: inherit;
+            color: navy;
+        }
+
+        .reptype {
+            background-color: burlywood;
+        }
+
+        .owner {
+            background-color: aquamarine;
+        }
+
+        .ppl {
+            background-color: darkslateblue;
+        }
+
+        .goods {
+            background-color: lightpink;
+
+        }
+
+        .repnametext {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .ownername {
+            font-weight: bold;
+
+        }
+
+        .husername {
+            font-size: 10px
+        }
+
+        input[type=text] {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            text-align: center;
+            background: none;
+            border: 1px solid lightblue;
+            width: 100%;
+
+        }
+
+        input[type=password] {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            /* border: 1,1,1,0; */
+            text-align: center;
+            background: none;
+            border: 1px solid lightblue;
+            width: 100%;
+        }
+
+        input[type=email] {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            /* border: 1,1,1,0; */
+            text-align: center;
+            background: none;
+            border: 1px solid lightblue;
+            width: 100%;
+        }
+
+        fieldset {
+            border-radius: 10px;
+            border: 1px solid lightblue;
+        }
+
+        label {
+            display: block;
+            align-self: center;
+        }
+
+        button {
+            /* remove default behavior */
+            appearance: none;
+            -webkit-appearance: none;
+            /* usual styles */
+            padding: 10px;
+            border: none;
+            background-color: lightblue;
+            color: #636b6f;
+            font-weight: 600;
+            border-radius: 5px;
+            width: 100%;
+            margin: 10px 0;
+
         }
     </style>
 </head>
@@ -130,16 +283,15 @@
                 <!-- Authentication Links -->
                 @guest
                 <li class="">
-                    <a class="" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    <!-- <a class="" href="{{ route('login') }}">{{ __('Login') }}</a> -->
                 </li>
                 @if (Route::has('register'))
                 <li class="">
-                    <a class="" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    <!-- <a class="" href="{{ route('register') }}">{{ __('Register') }}</a> -->
                 </li>
                 @endif
                 @else
                 <li class="">
-                
                     <img src="{{Auth::user()->user_img}}" style="height: 30px;" alt="">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }} <span class="caret"></span>
@@ -159,37 +311,22 @@
                 @endguest
             </ul>
         </div>
-        <div class="row">
-            <a href="/">
-                <img src="\img\png\round_logo.png" style="height: 50px; 
+        <!-- <div class="row">
+            <div class="col-3">
+                <a href="/">
+                    <img src="\img\png\round_logo.png" style="height: 80px; 
                 padding:5px; 
                 display: block;
                 margin-left: auto;
                 margin-right: auto;" alt="">
-            </a>
+                </a>
+            </div>
+            <div class="col"></div> -->
         </div>
 
         <div class="row">
-            <div class="column right">
+            <div class="col-2">
                 <!-- this to be in right -->
-                <div class="dhi">
-                    <h4>
-                        ތަރައްޤީ ކުރެވެމުންދާ އެޕުތައް...
-                    </h4>
-                    
-                    <div class="filaa">
-                        <a href="\haalathu">
-                        
-                            <img src="\img\logo\logo.png" width="30" height="30" alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="column middle">
-                @yield('content')
-            </div>
-            <div class="column left">
-                <!-- thinstobe in left -->
                 <ul class="dhi">
                     <li>ތަޢާރަފު</li>
                     <li>
@@ -197,10 +334,28 @@
                             އިޤުރާރު
                         </a>
                     </li>
-                    <li>އޮޅުންފިލުވައިދޭ ލިޔުން</li>
-                    <li>ޚިޔާލު</li>
+                    <li><span class="ar">الكتاب والسنة</span></li>
+                    <li>ޢަދަބިއްޔާތު</li>
                     <li></li>
                 </ul>
+            </div>
+            <div class="col">
+                @yield('content')
+            </div>
+            <div class="col-2">
+                <!-- this to be in left -->
+                <div class="dhi">
+                    <h3>
+                        ތަރައްޤީ ކުރެވެމުންދާ އެޕުތައް...
+                    </h3>
+
+                    <div class="filaa">
+                        <a href="\haalathu">
+
+                            <img src="\img\logo\logo.png" width="30" height="30" alt="">
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
