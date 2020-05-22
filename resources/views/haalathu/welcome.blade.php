@@ -170,7 +170,7 @@
 </head>
 
 <body>
-
+        
     <div class="row">
         <div class="col">
 
@@ -183,7 +183,6 @@
     </div>
 
     </div>
-
     <main class="">
         <div class="">
             <div class="row">

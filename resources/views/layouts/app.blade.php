@@ -26,6 +26,11 @@
 
     <!-- Styles -->
     <style>
+        @font-face {
+            font-family: "Dhivehi";
+            src: url("/fonts/mvtypebold.ttf");
+            src: url("/fonts/mvtyper.ttf");
+        }
         html,
         body {
             background-color: #e3f2fd;
@@ -35,7 +40,7 @@
             background-position: center;
             background-size: cover;
             color: #636b6f;
-            font-family: "MV Typewriter", 'Nunito', sans-serif;
+            font-family: 'Dhivehi', 'Nunito', sans-serif;
             font-weight: 200;
             height: 100vh;
             margin: 0;
@@ -67,7 +72,7 @@
         }
 
         .mvdate {
-            font-family: "MV Typewriter";
+            /* font-family: "MV Typewriter"; */
             text-align: center;
 
 
@@ -76,7 +81,7 @@
         .mvdate,
         .dhi,
         .mv {
-            font-family: "MV Typewriter";
+            /* font-family: "MV Typewriter"; */
 
         }
     </style>
@@ -273,17 +278,20 @@
             border-radius: 5px;
             /* width: 100%; */
             margin: 10px 0;
-            font-family: "MV Typewriter";
+            font-family: "Dhivehi";
         }
 
         button:hover {
             background-color: gray;
             color: white;
         }
-        .rwbsline{
+
+        .rwbsline {
             align-items: baseline;
 
         }
+
+        
     </style>
 </head>
 
@@ -303,10 +311,10 @@
                 @endif
                 @else
                 <li class="">
-                        <img src="{{Auth::user()->user_img}}" style="height: 30px; border-radius: 25%;" alt="">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }} <span class="caret"></span>
-                        </a>
+                    <img src="{{Auth::user()->user_img}}" style="height: 30px; border-radius: 25%;" alt="">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }} <span class="caret"></span>
+                    </a>
 
                     <div class="" aria-labelledby="navbarDropdown">
                         <a class="" href="{{ route('logout') }}" onclick="event.preventDefault();

@@ -26,6 +26,11 @@
 
     <!-- Styles -->
     <style>
+        @font-face {
+            font-family: "Dhivehi";
+            src: url("/fonts/mvtypebold.ttf");
+            src: url("/fonts/mvtyper.ttf");
+        }
         html,
         body {
 
@@ -37,13 +42,12 @@
             background-size: cover; */
 
             color: black;
-            font-family: "MV Typewriter", 'Nunito', sans-serif;
+            font-family: "Dhivehi", 'Nunito', sans-serif;
             font-weight: 200;
             /* height: 100vh;
             margin: 0; */
         }
-    </style>
-    <style>
+    
         * {
             box-sizing: border-box;
         }
@@ -135,7 +139,7 @@
 
         .dhi {
 
-            font-family: "MV Typewriter";
+            font-family: "Dhivehi";
         }
 
         .heading {
