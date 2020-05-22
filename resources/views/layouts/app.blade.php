@@ -163,6 +163,7 @@
 
         .row {
             display: flex;
+            /* align-items: baseline; */
             /* padding-bottom: 3px; */
         }
 
@@ -182,6 +183,7 @@
         .heading {
             background-color: inherit;
             color: navy;
+            border-radius: 25%;
         }
 
         .reptype {
@@ -269,8 +271,17 @@
             color: #636b6f;
             font-weight: 600;
             border-radius: 5px;
-            width: 100%;
+            /* width: 100%; */
             margin: 10px 0;
+            font-family: "MV Typewriter";
+        }
+
+        button:hover {
+            background-color: gray;
+            color: white;
+        }
+        .rwbsline{
+            align-items: baseline;
 
         }
     </style>
@@ -292,10 +303,10 @@
                 @endif
                 @else
                 <li class="">
-                    <img src="{{Auth::user()->user_img}}" style="height: 30px;" alt="">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }} <span class="caret"></span>
-                    </a>
+                        <img src="{{Auth::user()->user_img}}" style="height: 30px; border-radius: 25%;" alt="">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
 
                     <div class="" aria-labelledby="navbarDropdown">
                         <a class="" href="{{ route('logout') }}" onclick="event.preventDefault();

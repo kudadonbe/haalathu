@@ -2,24 +2,7 @@
 
 @section('content')
 <div class="container">
-    <style>
-        .regform {
 
-            /* background-color: lightseagreen; */
-        }
-
-        .formhead {
-
-            /* background-color: navajowhite; */
-        }
-
-        
-
-        button:hover {
-            background-color: gray;
-            color: white;
-        }
-    </style>
     <div class="regform">
         <div class="col">
             <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">

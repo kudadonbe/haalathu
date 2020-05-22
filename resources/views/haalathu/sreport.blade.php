@@ -1,37 +1,7 @@
 @extends('layouts.haalathu.app')
 
 @section('content')
-<style>
-    
 
-        /* .left,
-        .right {
-            width: 30%;
-        }
-
-
-        .middle {
-            width: 40%;
-        } */
-
-        /* Clear floats after the cols */
-        /* .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        .left { */
-            /* css for content left 
-            color: black;
-        }
-
-        /* .right {
-            /* css for content right
-            color: black;
-
-        } */
-</style>
 <div class="container">
     <div class="row heading">
         <div class="col-3 reptype">
