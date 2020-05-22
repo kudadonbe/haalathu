@@ -171,29 +171,24 @@
 
 
 
-        .heading {
-            background-color: inherit;
+        .pplHead {
+            background-color: #DFD4F9;
             color: navy;
-            border-radius: 25%;
         }
 
+
         .reptype {
-            background-color: burlywood;
+            background-color: #C4F3DF;
+        }
+
+        .goHead{
+            background-color: #F9EBD4;
         }
 
         .owner {
-            background-color: aquamarine;
+            background-color: #DDFCEF;
         }
-
-        .ppl {
-            background-color: darkslateblue;
-        }
-
-        .goods {
-            background-color: lightpink;
-
-        }
-
+       
         .repnametext {
             font-size: 25px;
             font-weight: bold;
@@ -271,7 +266,7 @@
         }
 
         .rwbsline {
-            align-items:baseline;
+            align-items: baseline;
 
         }
 
@@ -301,9 +296,9 @@
                             <img src="{{Auth::user()->user_img}}" style="height: 30px; border-radius: 25%;">
                         </div>
                         <div class="username">
-                            
-                                {{Auth::user()->name}}
-                            
+
+                            {{Auth::user()->name}}
+
                         </div>
                     </div>
                 </div>
@@ -335,11 +330,11 @@
 
         <!-- nav -->
         <div class="row">
-            
+
             <div class="col">
                 @yield('content')
             </div>
-            
+
         </div>
 
     </main>

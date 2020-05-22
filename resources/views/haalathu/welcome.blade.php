@@ -206,7 +206,7 @@
                     <div class="pagename dhi">
                         ގޭބިސީތައް
                     </div>
-                    <a href="/haalathu/hreport">
+                    <a href="/haalathu/reports/house">
                         <div class="pageimage">
                             <img src="\img\png\haalathu\home.png" style="height:70px;" alt="">
                         </div>
@@ -216,7 +216,7 @@
                     <div class="pagename dhi">
                         ވިޔަފާރިގެތައް
                     </div>
-                    <a href="/haalathu/sreport">
+                    <a href="/haalathu/reports/shop">
                         <div class="pageimage">
                             <img src="\img\png\haalathu\shop.png" style="height:70px;" alt="">
                         </div>

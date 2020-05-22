@@ -24,7 +24,7 @@ Route::get('/haalathu', 'PublicController@haalathu')->name('haalathu');
 Route::get('/haalathu/home', 'haalathuController@index')->name('haalathu.home');
 Route::get('/bayaan', 'PublicController@bayaan')->name('iquraaru');
 Route::get('/haalathu/register', 'PublicController@newuser')->name('haalathuRegs');
-Route::get('/haalathu/{report}', 'haalathuController@report')->name('haalathu.report');
+Route::get('/haalathu/reports/{house}', 'haalathuController@report')->name('haalathu.reports');
 
 
 

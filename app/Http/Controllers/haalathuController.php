@@ -18,15 +18,15 @@ class haalathuController extends Controller
     
     public function report($report)
     {
-        if ($report == "sreport") {
+        if ($report == "shop") {
+            return view('haalathu.reports.shop');
 
-            return view('haalathu.sreport');
-        } elseif ($report == "hreport") {
+        } elseif ($report == "house") {
 
-            return view('haalathu.hreport');
+            return view('haalathu.reports.house');
         } else {
 
-            return view('haalathu.home');
+            return view('haalathu.welcome');
         }
     }
     //
