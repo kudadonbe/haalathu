@@ -31,6 +31,7 @@
             src: url("/fonts/mvtypebold.ttf");
             src: url("/fonts/mvtyper.ttf");
         }
+
         html,
         body {
             background-color: #e3f2fd;
@@ -78,26 +79,10 @@
 
         }
 
-        .mvdate,
-        .dhi,
-        .mv {
-            /* font-family: "MV Typewriter"; */
-
-        }
-    </style>
-    <style>
         * {
             box-sizing: border-box;
         }
 
-        /* Create three unequal columns that floats next to each other */
-
-
-        * {
-            box-sizing: border-box;
-        }
-
-        /* Create three unequal cols that floats next to each other */
         .col {
             width: 100%;
             padding: 5px;
@@ -181,6 +166,7 @@
 
         .barnav {
             background-color: #A0D2F3;
+            align-items: center;
         }
 
 
@@ -218,9 +204,7 @@
 
         }
 
-        .husername {
-            font-size: 10px
-        }
+
 
         input[type=text] {
             padding: 10px;
@@ -287,62 +271,69 @@
         }
 
         .rwbsline {
-            align-items: baseline;
+            align-items:baseline;
 
         }
 
-        
+        .userlogo {
+            padding: 5px;
+
+        }
+
+        .username {
+            font-size: 15px;
+            text-align: center;
+            /* background-color:blue; */
+
+        }
     </style>
 </head>
 
 <body>
     <main>
-        <div class="row">
-            <ul class="navbar-nav ml-auto">
-                <!-- Authentication Links -->
-                @guest
-                <li class="">
-                    <!-- <a class="" href="{{ route('login') }}">{{ __('Login') }}</a> -->
-                </li>
-                @if (Route::has('register'))
-                <li class="">
-                    <!-- <a class="" href="{{ route('register') }}">{{ __('Register') }}</a> -->
-                </li>
-                @endif
-                @else
-                <li class="">
-                    <img src="{{Auth::user()->user_img}}" style="height: 30px; border-radius: 25%;" alt="">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }} <span class="caret"></span>
-                    </a>
 
-                    <div class="" aria-labelledby="navbarDropdown">
-                        <a class="" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                            <img src="\img\png\logout.png" style="height: 30px;" alt="">
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
+        <!-- nav -->
+        <nav class="navbar">
+            <div class="row barnav">
+                <div class="col">
+                    <div class="row userinfo baseline">
+                        <div class="userlogo">
+                            <img src="{{Auth::user()->user_img}}" style="height: 30px; border-radius: 25%;">
+                        </div>
+                        <div class="username">
+                            
+                                {{Auth::user()->name}}
+                            
+                        </div>
                     </div>
-                </li>
-                @endguest
-            </ul>
-        </div>
-        <!-- <div class="row">
-            <div class="col-3">
-                <a href="/">
-                    <img src="\img\png\round_logo.png" style="height: 80px; 
-                padding:5px; 
-                display: block;
-                margin-left: auto;
-                margin-right: auto;" alt="">
-                </a>
+                </div>
+                <div class="col">
+                    <a href="/haalathu">
+                        <img src="\img\png\logo.png" style="height: 100px;
+                        padding:5px; 
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" alt="">
+                    </a>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col-2">
+                            <a class="" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                <img src="\img\png\logout.png" style="height: 30px;" alt="">
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col"></div> -->
-        </div>
+        </nav>
 
+        <!-- nav -->
         <div class="row">
             <div class="col-2">
                 <!-- this to be in right -->

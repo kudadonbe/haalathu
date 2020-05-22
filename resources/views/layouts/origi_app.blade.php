@@ -290,17 +290,49 @@
 <body>
     <main>
         <div class="row">
-            <div class="col"></div>
+            <ul class="navbar-nav ml-auto">
+                <!-- Authentication Links -->
+                @guest
+                <li class="">
+                    <!-- <a class="" href="{{ route('login') }}">{{ __('Login') }}</a> -->
+                </li>
+                @if (Route::has('register'))
+                <li class="">
+                    <!-- <a class="" href="{{ route('register') }}">{{ __('Register') }}</a> -->
+                </li>
+                @endif
+                @else
+                <li class="">
+                    <img src="{{Auth::user()->user_img}}" style="height: 30px; border-radius: 25%;" alt="">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }} <span class="caret"></span>
+                    </a>
+
+                    <div class="" aria-labelledby="navbarDropdown">
+                        <a class="" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                            <img src="\img\png\logout.png" style="height: 30px;" alt="">
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+                @endguest
+            </ul>
+        </div>
+        <!-- <div class="row">
             <div class="col-3">
                 <a href="/">
-                    <img src="\img\png\logo.png" style="height: 100px; 
+                    <img src="\img\png\round_logo.png" style="height: 80px; 
                 padding:5px; 
                 display: block;
                 margin-left: auto;
                 margin-right: auto;" alt="">
                 </a>
             </div>
-            <div class="col"></div>
+            <div class="col"></div> -->
         </div>
 
         <div class="row">
@@ -318,8 +350,8 @@
                     <li></li>
                 </ul>
             </div>
-            <div class="col" style="text-align: center;">
-                <h1>މި ވެބްސައިޓު ތަރައްޤީ ކުރެވެމުން ދަނީ...</h1>
+            <div class="col">
+                @yield('content')
             </div>
             <div class="col-2">
                 <!-- this to be in left -->
