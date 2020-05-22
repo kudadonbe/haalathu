@@ -304,7 +304,7 @@
                 </div>
                 <div class="col">
                     <a href="/haalathu">
-                        <img src="\img\png\haLogo.png" style="height: 100px;
+                        <img src="\img\png\haalathu\logo.png" style="height: 100px;
                         padding:5px; 
                         display: block;
                         margin-left: auto;

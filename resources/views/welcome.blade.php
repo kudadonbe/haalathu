@@ -331,7 +331,7 @@
                     <div class="filaa">
                         <a href="\haalathu">
 
-                            <img src="\img\logo\logo.png" width="30" height="30" alt="">
+                            <img src="\img\png\haalathu\logo.png" height="30" alt="">
                         </a>
                     </div>
                 </div>

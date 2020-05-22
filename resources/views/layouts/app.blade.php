@@ -379,13 +379,13 @@
                 <!-- this to be in left -->
                 <div class="dhi">
                     <h3>
-                        ތަރައްޤީ ކުރެވެމުންދާ އެޕުތައް...
+                      ތަރައްޤީ ކުރެވެމުންދާ އެޕުތައް...
                     </h3>
-
                     <div class="filaa">
                         <a href="\haalathu">
 
-                            <img src="\img\logo\logo.png" width="30" height="30" alt="">
+                            <img src="\img\png\haalathu\logo.png" width="30" alt="">
+                            
                         </a>
                     </div>
                 </div>
