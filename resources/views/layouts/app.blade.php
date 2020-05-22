@@ -165,7 +165,7 @@
         }
 
         .barnav {
-            background-color: #A0D2F3;
+            background-color: lightsteelblue;
             align-items: center;
         }
 
@@ -271,7 +271,7 @@
         }
 
         .rwbsline {
-            align-items:baseline;
+            align-items: baseline;
 
         }
 
@@ -293,22 +293,43 @@
     <main>
 
         <!-- nav -->
+
         <nav class="navbar">
             <div class="row barnav">
+                @guest
+                <!-- <a class="" href="{{ route('login') }}">{{ __('Login') }}</a> -->
+
+                <div class="col"></div>
+                <div class="col">
+                    <a href="/">
+                        <img src="\img\png\logo.png" style="height: 100px;
+                        padding:5px; 
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" alt="">
+                    </a>
+                </div>
+                <div class="col"></div>
+
+
+                @if (Route::has('register'))
+                <!-- <a class="" href="{{ route('register') }}">{{ __('Register') }}</a> -->
+                @endif
+                @else
                 <div class="col">
                     <div class="row userinfo baseline">
                         <div class="userlogo">
                             <img src="{{Auth::user()->user_img}}" style="height: 30px; border-radius: 25%;">
                         </div>
                         <div class="username">
-                            
-                                {{Auth::user()->name}}
-                            
+
+                            {{Auth::user()->name}}
+
                         </div>
                     </div>
                 </div>
                 <div class="col">
-                    <a href="/haalathu">
+                    <a href="/">
                         <img src="\img\png\logo.png" style="height: 100px;
                         padding:5px; 
                         display: block;
@@ -330,6 +351,8 @@
                         </div>
                     </div>
                 </div>
+                @endguest
+
             </div>
         </nav>
 

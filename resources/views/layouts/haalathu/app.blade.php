@@ -335,38 +335,11 @@
 
         <!-- nav -->
         <div class="row">
-            <div class="col-2">
-                <!-- this to be in right -->
-                <ul class="dhi">
-                    <li>ތަޢާރަފު</li>
-                    <li>
-                        <a href="/bayaan">
-                            އިޤުރާރު
-                        </a>
-                    </li>
-                    <li><span class="ar">الكتاب والسنة</span></li>
-                    <li>ޢަދަބިއްޔާތު</li>
-                    <li></li>
-                </ul>
-            </div>
+            
             <div class="col">
                 @yield('content')
             </div>
-            <div class="col-2">
-                <!-- this to be in left -->
-                <div class="dhi">
-                    <h3>
-                        ތަރައްޤީ ކުރެވެމުންދާ އެޕުތައް...
-                    </h3>
-
-                    <div class="filaa">
-                        <a href="\haalathu">
-
-                            <img src="\img\logo\logo.png" width="30" height="30" alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
+            
         </div>
 
     </main>
