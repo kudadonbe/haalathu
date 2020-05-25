@@ -16,7 +16,7 @@
                 </div>
                 <div class="col repname">
                     <div class="repnametext">
-                        މަދަދު
+                        {{$house->name}}
                     </div>
                     <div class="repisland">
                         ހދ. ވައިކަރަދޫ
@@ -27,10 +27,11 @@
         </div>
         <div class="col owner">
             <div class="ownername">
-                ޢަބްދުﷲ ޒަރީރު
+             
+            {{$house->owner->person->name}}
             </div>
             <div class="ownercontact">
-                9898250
+            {{$house->owner->person->contact}}
             </div>
         </div>
     </div>

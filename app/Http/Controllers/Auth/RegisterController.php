@@ -55,7 +55,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'username' => ['required', 'string', 'max:255', 'unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'user_img' => ['required', 'image'],
+            // 'user_img' => ['required', 'image'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             ]);
     }
@@ -68,8 +68,9 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $imagePath = request('user_img')->store('uploads', 'public');
-        $imagePath = '/storage/'.$imagePath;
+        // $imagePath = request('user_img')->store('uploads', 'public');
+        // $imagePath = '/storage/'.$imagePath;
+        $imagePath = '/';
 
         return User::create([
             'nid' => $data['nid'],
