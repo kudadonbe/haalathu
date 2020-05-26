@@ -75,7 +75,6 @@
             <div class="row data">
                 <div class="col-1 mvicon"><img src="\img\png\haalathu\reports\rice.png" style="height:20px;" alt=""></div>
                 <div class="col-7 mvdetails">ހަނޑޫ
-                {{}}
                 </div>
                 <div class="col-2 mvqtydata">50</div>
                 <div class="col-2 mvqtyunit">ކިލޯ</div>

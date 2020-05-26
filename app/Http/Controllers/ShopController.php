@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Commodity;
 use App\Shop;
 use App\Stock;
+use DB;
 use Illuminate\Http\Request;
 
 class ShopController extends Controller
@@ -12,8 +14,15 @@ class ShopController extends Controller
     {
         
         $shop = Shop::where('name', $name)->firstOrFail();
+        
+         $stocks = DB::table('stocks')
+            ->where('shop_id', '=', $shop->id )
+            ->join('commodities', 'commodities.id', '=', 'stocks.commodity_id')
+            ->select('stocks.*', 'commodities.name', 'commodities.unit')
+            ->get();
+        // dd($stocks);
 
-        return view('haalathu.reports.xshop', compact('shop'));
+        return view('haalathu.reports.xshop', compact('shop', 'stocks'));
     }
 
 }

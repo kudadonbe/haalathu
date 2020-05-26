@@ -9,7 +9,7 @@ class Stock extends Model
     // protected $guarded = [];
     public function shop()
     {
-        return $this->hasMany(Shop::class);
+        return $this->belongsTo(Shop::class);
     }
 
     public function commodity()

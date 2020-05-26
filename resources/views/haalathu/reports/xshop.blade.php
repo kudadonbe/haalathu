@@ -11,7 +11,7 @@
                 </div>
                 <div class="col repname">
                     <div class="repnametext">
-                    {{$shop->name}}
+                        {{$shop->name}}
                     </div>
                     <div class="repisland">
                         ހދ. ވައިކަރަދޫ
@@ -21,12 +21,12 @@
             </div>
         </div>
         <div class="col owner">
-        <div class="ownername">
-        {{$shop->owner->person->name}}
-        </div>
-        <div class="ownercontact">
-        {{$shop->owner->person->contact}}
-        </div>
+            <div class="ownername">
+                {{$shop->owner->person->name}}
+            </div>
+            <div class="ownercontact">
+                {{$shop->owner->person->contact}}
+            </div>
         </div>
     </div>
     <div class="row report">
@@ -35,7 +35,18 @@
                 <div class="col-2 mvicon"><img src="\img\png\haalathu\reports\food_items.png" style="height:20px;" alt=""></div>
                 <div class="mvdetails">ތަފްޞީލު</div>
             </div>
+
+            @foreach($stocks as $stock)
             
+                <div class="row data">
+                    
+                <div class="col-1 mvicon"><img src="\img\png\haalathu\reports\rice.png" style="height:20px;" alt=""></div>
+                <div class="col-7 mvdetails">{{$stock->name}}</div>
+                <div class="col-2 mvqtydata">{{$stock->qty}}</div>
+                <div class="col-2 mvqtyunit">{{$stock->unit}}</div>
+            </div>
+            @endforeach
+
             <div class="row data">
                 <div class="col-1 mvicon"><img src="\img\png\haalathu\reports\rice.png" style="height:20px;" alt=""></div>
                 <div class="col-7 mvdetails">ހަނޑޫ</div>
@@ -84,7 +95,7 @@
                 <div class="col-2 mvqtydata">50</div>
                 <div class="col-2 mvqtyunit">ދަޅު</div>
             </div>
-            
+
         </div>
     </div>
 </div>
