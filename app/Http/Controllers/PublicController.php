@@ -15,11 +15,7 @@ class PublicController extends Controller
     {
         return view('bayaan');
     }
-    public function newuser()
-    {
-
-        return view('haalathu.register');
-    }
+  
 
     
 }

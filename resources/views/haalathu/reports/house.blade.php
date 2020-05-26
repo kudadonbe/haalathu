@@ -1,4 +1,4 @@
-@extends('layouts.haalathu.app')
+@extends('haalathu.layouts.app')
 
 @section('content')
 <div class="container">
@@ -16,7 +16,7 @@
                 </div>
                 <div class="col repname">
                     <div class="repnametext">
-                        މަދަދު
+                        {{$house->name}}
                     </div>
                     <div class="repisland">
                         ހދ. ވައިކަރަދޫ
@@ -27,10 +27,11 @@
         </div>
         <div class="col owner">
             <div class="ownername">
-                ޢަބްދުﷲ ޒަރީރު
+             
+            {{$house->owner->person->name}}
             </div>
             <div class="ownercontact">
-                9898250
+            {{$house->owner->person->contact}}
             </div>
         </div>
     </div>
@@ -75,6 +76,7 @@
             <div class="row data">
                 <div class="col-1 mvicon"><img src="\img\png\haalathu\reports\rice.png" style="height:20px;" alt=""></div>
                 <div class="col-7 mvdetails">ހަނޑޫ
+                {{}}
                 </div>
                 <div class="col-2 mvqtydata">50</div>
                 <div class="col-2 mvqtyunit">ކިލޯ</div>

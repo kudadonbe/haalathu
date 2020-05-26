@@ -12,11 +12,11 @@ class ShopController extends Controller
 {
     public function index($name)
     {
-        
+
         $shop = Shop::where('name', $name)->firstOrFail();
-        
-         $stocks = DB::table('stocks')
-            ->where('shop_id', '=', $shop->id )
+
+        $stocks = DB::table('stocks')
+            ->where('shop_id', '=', $shop->id)
             ->join('commodities', 'commodities.id', '=', 'stocks.commodity_id')
             ->select('stocks.*', 'commodities.name', 'commodities.unit')
             ->get();
