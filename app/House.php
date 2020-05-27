@@ -11,15 +11,17 @@ class House extends Model
     //     'nid', 'username', 'name', 'email', 'password','user_img'
     // ];
 
-    // protected $guarded = [];
-    public function owner()
+    protected $guarded = [];
+
+    public function person()
     {
-        return $this->belongsTo(Owner::class);
+        return $this->belongsTo(Person::class);
     }
     public function item()
     {
         return $this->hasMany(Item::class);
     }
+
 
 
 }

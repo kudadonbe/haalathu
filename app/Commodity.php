@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Commodity extends Model
 {
-    public function stock()
+    public function stocks()
     {
         return $this->hasMany(Stock::class);
     }

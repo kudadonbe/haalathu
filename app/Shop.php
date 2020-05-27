@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Shop extends Model
 {
-    public function owner()
+    public function person()
     {
-        return $this->belongsTo(Owner::class);
+        return $this->belongsTo(Person::class);
     }
-    public function stock()
+    public function stocks()
     {
         return $this->hasMany(Stock::class);
     }

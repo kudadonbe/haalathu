@@ -15,14 +15,14 @@ class CreateShopsTable extends Migration
     {
         Schema::create('shops', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('owner_id');
+            $table->unsignedBigInteger('person_id');
             $table->string('name');
             $table->string('road')->nullable();
             $table->string('contact');
             $table->string('img_url');
             $table->timestamps();
             
-            $table->index('owner_id');
+            $table->index('person_id');
         });
     }
 

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
 
-    <div class="regform-rtl">
+    <div class="regform">
         <div class="col">
             <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                 @csrf

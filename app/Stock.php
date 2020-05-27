@@ -12,7 +12,7 @@ class Stock extends Model
         return $this->belongsTo(Shop::class);
     }
 
-    public function commodity()
+    public function commodities()
     {
         return $this->hasMany(Commodity::class);
     }

@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 
 class ShopController extends Controller
 {
-    public function index($name)
+    public function show($name)
     {
 
         $shop = Shop::where('name', $name)->firstOrFail();
@@ -22,7 +22,7 @@ class ShopController extends Controller
             ->get();
         // dd($stocks);
 
-        return view('haalathu.reports.xshop', compact('shop', 'stocks'));
+        return view('haalathu.reports.shop', compact('shop', 'stocks'));
     }
 
 }
