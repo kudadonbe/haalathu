@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Shop extends Model
 {
+    protected $guarded = [];
+    
     public function person()
     {
         return $this->belongsTo(Person::class);

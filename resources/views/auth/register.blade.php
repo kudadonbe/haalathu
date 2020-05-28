@@ -123,7 +123,12 @@
                                 {{ __('ރަޖިސްޓަރީ ކުރައްވާ') }}
                             </button>
                         </div>
-                        <div class="col"></div>
+                        <div class="col">
+                            <test>
+                                <img src="\img\svg\alarm-fill.svg" alt="" width="32" height="32" title="Bootstrap">
+
+                            </test>
+                        </div>
                     </div>
             </form>
             </fieldset>

@@ -22,10 +22,10 @@
         </div>
         <div class="col owner">
             <div class="ownername">
-                {{$shop->owner->person->name}}
+                {{$shop->person->name}}
             </div>
             <div class="ownercontact">
-                {{$shop->owner->person->contact}}
+                {{$shop->person->contact}}
             </div>
         </div>
     </div>
@@ -37,9 +37,7 @@
             </div>
 
             @foreach($stocks as $stock)
-            
-                <div class="row data">
-                    
+            <div class="row data">
                 <div class="col-1 mvicon"><img src="\img\png\haalathu\reports\rice.png" style="height:20px;" alt=""></div>
                 <div class="col-7 mvdetails">{{$stock->name}}</div>
                 <div class="col-2 mvqtydata">{{$stock->qty}}</div>

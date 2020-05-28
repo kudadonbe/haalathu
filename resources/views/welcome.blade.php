@@ -14,7 +14,9 @@
     <style>
         html,
         body {
+            /* public\img\png\logor.png */
             background-color: #fff;
+            background-image: url("/img/png/logor.png");
             color: #636b6f;
             font-family: 'Nunito', sans-serif;
             font-weight: 200;
@@ -63,6 +65,10 @@
         .m-b-md {
             margin-bottom: 30px;
         }
+
+        .app-links {
+            height: 26px;
+        }
     </style>
 </head>
 
@@ -85,12 +91,20 @@
         <div class="content">
             <div class="title m-b-md">
                 <!-- {{ config('app.name') }} -->
-                <img src="\img\png\logo.png" alt="" style="height:50vw;">
+                <!-- <img src="\img\png\logo.png" alt="" style="height:50vw; opacity: 100%;"> -->
+                <img src="\img\svg\alarm-fill.svg" alt="" width="32" height="32" title="Bootstrap">
             </div>
+            <div class="links">
+                <a href="http://instagram.com/hsaryfm"><img src="img\links\insta_logo.png" class="app-links" alt=""></a>
+                <a href="http://twitter.com/hsaryfm"><img src="\img\links\twt_logo.png" class="app-links" alt=""></a>
+                <a href="/haalathu"><img src="\img\png\haalathu\logo.png" class="app-links" alt=""></a>
+                <a href="https://facebook.com/hsaryfm"><img src="\img\links\fb_logo.png" class="app-links" alt=""></a>
+                <a href="https://github.com/hsaryfm"><img src="\img\links\GitHub_logo.png" class="app-links" alt=""></a>
 
+            </div>
         </div>
     </div>
-    
+
 </body>
 
 </html>

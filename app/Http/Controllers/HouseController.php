@@ -15,10 +15,18 @@ class HouseController extends Controller
     {
         $this->middleware('auth');
     }
+
+    public function index()
+    {
+        $houses = House::all();
+        // dd($house);
+        return view('haalathu.houses.index', compact('houses'));
+    }
     
     public function show($name)
     {
         $house = House::where('name', $name)->firstOrFail();
+        // dd($house);
 
 
         $items = DB::table('items')
@@ -53,9 +61,11 @@ class HouseController extends Controller
             'name' => request()->house_name,
         ];
 
-        dd($house);
+        // dd($house);
 
         House::create($house);
+
+        return redirect('/haalathu/houses');
         
     }
 }

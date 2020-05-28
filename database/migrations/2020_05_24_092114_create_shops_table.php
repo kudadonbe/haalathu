@@ -19,7 +19,7 @@ class CreateShopsTable extends Migration
             $table->string('name');
             $table->string('road')->nullable();
             $table->string('contact');
-            $table->string('img_url');
+            $table->string('img_url')->nullable();
             $table->timestamps();
             
             $table->index('person_id');
