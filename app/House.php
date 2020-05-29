@@ -12,10 +12,11 @@ class House extends Model
     // ];
 
     protected $guarded = [];
-
-    public function person()
+        
+    public function owner()
     {
-        return $this->belongsTo(Person::class);
+        return $this->belongsTo(Owner::class);
+        
     }
     public function item()
     {

@@ -20,18 +20,7 @@ class PersonController extends Controller
         // dd($people);
         return view('haalathu.people.index', compact('people'));
     }
-
-
-
-    public function show($nid)
-    {
-        $person = Person::where('nid', $nid)->firstOrFail();
-        // dd($person);
-
-        return view('haalathu.people.show', compact('person'));
-    }
-
-
+    
     public function create()
     {
         // dd("in create form");
@@ -47,11 +36,23 @@ class PersonController extends Controller
             'dob' => 'required',
             'contact' => 'required',
             'gender' => 'required',
+            'med' => '',
+            'preg' => '',
+            'sp_care' => '',
         ]);
 
+        // dd($person);
 
         Person::create($person);
         return redirect('haalathu/people');
+    }
+
+    public function show($nid)
+    {
+        $person = Person::where('nid', $nid)->firstOrFail();
+        // dd($person);
+
+        return view('haalathu.people.show', compact('person'));
     }
 
     public function edit($nid)
@@ -67,17 +68,19 @@ class PersonController extends Controller
         $person_update = request()->validate([
             'nid' => 'required',
             'name' => 'required',
-            'name' => 'required',
             'dob' => 'required',
             'contact' => 'required',
             'gender' => 'required',
+            'med' => '',
+            'preg' => '',
+            'sp_care' => '',
         ]);
-
+        // dd($person_update);
         $person = Person::where('nid', $nid)->firstOrFail();
 
 
         $person->update($person_update);
-        $path = '/haalathu/person/' . request()->nid;
+        $path = '/haalathu/person/' . $person->nid;
         // dd($path);
         return Redirect($path);
     }

@@ -23,8 +23,8 @@
                             {{$house->name}}
                         </a>
                     </div>
-                    <div class="col">{{$house->person->name}}</div>
-                    <div class="col">{{$house->person->contact}}</div>
+                    <div class="col">{{ $house->owner->person->name }}</div>
+                    <div class="col">{{ $house->owner->person->contact }}</div>
                 </div>
                 @endforeach
                 <div class="row links">

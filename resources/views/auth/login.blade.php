@@ -1,8 +1,9 @@
-@extends('layouts.app')
+@extends('haalathu.layouts.app')
 
 @section('content')
 <div class="container">
     <div class="row">
+        <div class="col-3"></div>
         <div class="col">
             <div class="card-body">
                 <form method="POST" action="{{ route('login') }}">
@@ -51,7 +52,7 @@
                                             {{ __('ވެދެވަޑައިގަންނަވާ') }}
                                         </button>
                                     </div>
-                                    <div class="col-4" style="text-align: center;">
+                                    <div class="col-4 links" style="text-align: center;">
 
                                         @if (Route::has('password.request'))
                                         <a class="" href="{{ route('password.request') }}">
@@ -66,6 +67,7 @@
                 </form>
             </div>
         </div>
+        <div class="col-3"></div>
     </div>
 </div>
 @endsection

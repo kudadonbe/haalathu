@@ -19,6 +19,7 @@ class CreateStocksTable extends Migration
             $table->unsignedBigInteger('shop_id');
             $table->decimal('qty')->nullable();
             $table->decimal('price')->nullable();
+            $table->string('img_url')->nullable();
             $table->timestamps();
             
             $table->index('commodity_id');

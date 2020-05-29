@@ -19,9 +19,12 @@ class CreatePeopleTable extends Migration
             $table->string('name');
             $table->date('dob');
             $table->string('contact');
-            $table->string('gender');
+            $table->boolean('gender')->default(null);
+            $table->boolean('med')->default(0);
+            $table->boolean('preg')->default(0);
+            $table->boolean('sp_care')->default(0);
+            $table->unsignedBigInteger('house_id')->nullable();
             $table->timestamps();
-            
         });
     }
 

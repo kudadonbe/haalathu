@@ -8,13 +8,9 @@ class Person extends Model
 {
     protected $guarded = [];
     
-    public function houses()
+    
+    public function owners()
     {
-        return $this->hasMany(House::class);
-    }
-
-    public function shops()
-    {
-        return $this->hasMany(Shop::class);
+        return $this->hasMany(Owner::class);
     }
 }

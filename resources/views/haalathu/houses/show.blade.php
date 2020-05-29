@@ -2,12 +2,10 @@
 
 @section('content')
 <div class="container">
-<style>
+    <style>
 
-    
-    
     </style>
-    
+
     <div class="row heading">
         <div class="col-3 reptype">
             <div class="row">
@@ -27,16 +25,16 @@
         </div>
         <div class="col owner">
             <div class="ownername">
-             
-            {{$house->owner->person->name}}
+
+                {{$house->owner->person->name}}
             </div>
             <div class="ownercontact">
-            {{$house->owner->person->contact}}
+                {{$house->owner->person->contact}}
             </div>
         </div>
     </div>
     <div class="row report">
-
+        <!-- status of residents -->
         <div class="col-6 ppl">
             <div class="row pplHead">
                 <div class="col-1 mvicon"><img src="\img\png\haalathu\reports\family.png" style="height:20px;" alt=""></div>
@@ -68,6 +66,9 @@
                 <div class="col-2 mvqtydata">ނެތް</div>
             </div>
         </div>
+
+        <!-- status of necessities -->
+
         <div class="col-6 goods">
             <div class="row goHead">
                 <div class="col-1 mvicon"><img src="\img\png\haalathu\reports\food_items.png" style="height:20px;" alt=""></div>
@@ -79,48 +80,6 @@
                 </div>
                 <div class="col-2 mvqtydata">50</div>
                 <div class="col-2 mvqtyunit">ކިލޯ</div>
-            </div>
-            <div class="row data">
-                <div class="col-1 mvicon"><img src="\img\png\haalathu\reports\sugar.png" style="height:20px;" alt=""></div>
-                <div class="col-7 mvdetails">ހަކުރު</div>
-                <div class="col-2 mvqtydata">50</div>
-                <div class="col-2 mvqtyunit">ކިލޯ</div>
-            </div>
-            <div class="row data">
-                <div class="col-1 mvicon"><img src="\img\png\haalathu\reports\flour.png" style="height:20px;" alt=""></div>
-                <div class="col-7 mvdetails">ފުއް</div>
-                <div class="col-2 mvqtydata">50</div>
-                <div class="col-2 mvqtyunit">ކިލޯ</div>
-            </div>
-            <div class="row data">
-                <div class="col-1 mvicon"><img src="\img\png\haalathu\reports\water.png" style="height:20px;" alt=""></div>
-                <div class="col-7 mvdetails">ބޯފެން</div>
-                <div class="col-2 mvqtydata">50</div>
-                <div class="col-2 mvqtyunit">ކިލޯ</div>
-            </div>
-            <div class="row data">
-                <div class="col-1 mvicon"><img src="\img\png\haalathu\reports\gas.png" style="height:20px;" alt=""></div>
-                <div class="col-7 mvdetails">ގޭސް</div>
-                <div class="col-2 mvqtydata">50</div>
-                <div class="col-2 mvqtyunit">ކިލޯ</div>
-            </div>
-            <div class="row data">
-                <div class="col-1 mvicon"><img src="\img\png\haalathu\reports\milk.png" style="height:20px;" alt=""></div>
-                <div class="col-7 mvdetails">ކިރު</div>
-                <div class="col-2 mvqtydata">50</div>
-                <div class="col-2 mvqtyunit">ދަޅު</div>
-            </div>
-            <div class="row data">
-                <div class="col-1 mvicon"><img src="\img\png\haalathu\reports\onion.png" style="height:20px;" alt=""></div>
-                <div class="col-7 mvdetails">ފިޔާ</div>
-                <div class="col-2 mvqtydata">50</div>
-                <div class="col-2 mvqtyunit">ކިލޯ</div>
-            </div>
-            <div class="row data">
-                <div class="col-1 mvicon"><img src="\img\png\haalathu\reports\tuna.jpg" style="height:20px;" alt=""></div>
-                <div class="col-7 mvdetails">މަސްދަޅު</div>
-                <div class="col-2 mvqtydata">50</div>
-                <div class="col-2 mvqtyunit">ދަޅު</div>
             </div>
         </div>
     </div>

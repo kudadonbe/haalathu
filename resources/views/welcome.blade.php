@@ -91,8 +91,9 @@
         <div class="content">
             <div class="title m-b-md">
                 <!-- {{ config('app.name') }} -->
-                <!-- <img src="\img\png\logo.png" alt="" style="height:50vw; opacity: 100%;"> -->
-                <img src="\img\svg\alarm-fill.svg" alt="" width="32" height="32" title="Bootstrap">
+                <!-- <img src="\img\png\logo.png" alt="" style="height:30vw; opacity: 100%;"> -->
+                <a href="/haalathu"><img src="\img\png\haalathu\logo.png" class="" alt=""></a>
+                <!-- <img src="\img\svg\alarm-fill.svg" alt="" width="32" height="32" title="Bootstrap"> -->
             </div>
             <div class="links">
                 <a href="http://instagram.com/hsaryfm"><img src="img\links\insta_logo.png" class="app-links" alt=""></a>

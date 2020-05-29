@@ -8,10 +8,12 @@ class Shop extends Model
 {
     protected $guarded = [];
     
-    public function person()
+  
+    public function owner()
     {
-        return $this->belongsTo(Person::class);
+        return $this->belongsTo(Owner::class);
     }
+    
     public function stocks()
     {
         return $this->hasMany(Stock::class);
