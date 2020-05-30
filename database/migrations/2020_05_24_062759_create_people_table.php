@@ -18,6 +18,9 @@ class CreatePeopleTable extends Migration
             $table->string('nid')->unique();
             $table->string('name');
             $table->date('dob');
+            $table->date('house');
+            $table->string('atoll');
+            $table->string('island');
             $table->string('contact');
             $table->boolean('gender')->default(null);
             $table->boolean('med')->default(0);

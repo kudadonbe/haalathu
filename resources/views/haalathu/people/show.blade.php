@@ -13,12 +13,16 @@
                 </legend>
                 <div class="col">
                     <div class="row">
-                        <label for="nid" class="col-4">{{ __('އައިޑީ ނަންބަރު:') }}</label>
+                        <label for="nid" class="col-4">{{ __('އައިޑީ ކާޑު ނަންބަރު:') }}</label>
                         <div class="col">{{$person->nid}}</div>
                     </div>
                     <div class="row">
                         <label for="name" class="col-4">{{ __('ނަން:') }}</label>
                         <div class="col">{{$person->name}}</div>
+                    </div>
+                    <div class="row">
+                        <label for="name" class="col-4">{{ __('ދާއިމީ އެޑްރެސް:') }}</label>
+                        <div class="col"><span>{{ $person->house }}،</span> <span>{{ $person->atoll }}</span> <span> {{ $person->island }} </span></div>
                     </div>
                     <div class="row">
                         <label for="dob" class="col-4">{{ __('އުފަން ތާރީޚު:') }}</label>

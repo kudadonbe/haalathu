@@ -23,17 +23,17 @@
                             {{$shop->name}}
                         </a>
                     </div>
-                    <div class="col">{{$shop->person->name}}</div>
-                    <div class="col">{{$shop->person->contact}}</div>
+                    <div class="col">{{$shop->owner->person->name}}</div>
+                    <div class="col">{{$shop->owner->person->contact}}</div>
                 </div>
                 @endforeach
                 <div class="row links">
-                <a href="/haalathu/shop/create">+</a>
-            </div>
+                    <a href="/haalathu/shop/create">+</a>
+                </div>
 
 
             </fieldset>
-            
+
         </div>
         <div class="col-3"></div>
     </div>

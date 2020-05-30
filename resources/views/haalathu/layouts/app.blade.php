@@ -34,8 +34,8 @@
 
         html,
         body {
-            /* background-color: #e3f2fd; */
-            background-image: url("/img/B15_75op.png");
+            background-color: #e6ecff;
+            /* background-image: url("/img/B15_75op.png"); */
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center;
@@ -205,7 +205,7 @@
             padding: 10px;
             margin: 10px 0;
             border-radius: 5px;
-            text-align: center;
+            text-align: right;
             background: none;
             border: 1px solid lightblue;
             width: 100%;
@@ -229,7 +229,7 @@
             margin: 10px 0;
             border-radius: 5px;
             /* border: 1,1,1,0; */
-            text-align: center;
+            text-align: right;
             background: none;
             border: 1px solid lightblue;
             width: 100%;
