@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Commodity;
+use App\Owner;
 use App\Person;
 use App\Shop;
 use App\Stock;
@@ -35,34 +36,44 @@ class ShopController extends Controller
         // dd("in store");
         // dd(request()->all());
 
-        
+
 
         $shop_info = request()->validate([
             'shop_name' => ['required', 'unique:shops'],
             'person_nid'  => 'required',
+            'atoll'  => 'required',
+            'island'  => 'required',
             'contact'  => 'required',
         ]);
         // dd($shop_info);
-        $nid = request()->person_nid;
+        $nid = $shop_info['person_nid'];
         // dd($nid);
-        $owner = Person::where('nid',$nid)->firstOrFail();
-        
+        $person = Person::where('nid', $nid)->firstOrFail();
+
+        $owner_data = [
+            'person_id' => $person->id,
+        ];
+        // dd($owner_data);
+
+        $owner = Owner::create($owner_data);
+
         // dd($owner);
         $shop = [
-            'person_id' => $owner->id,
-            'name' => request()->shop_name,
-            'contact' => request()->contact,
+            'owner_id' => $owner->id,
+            'name' => $shop_info['shop_name'],
+            'atoll' => $shop_info['atoll'],
+            'island' => $shop_info['island'],
+            'contact' => $shop_info['contact'],
             'img_url' => '/',
         ];
 
 
         // dd($shop);
-       
+
 
         Shop::create($shop);
 
         return redirect('/haalathu/shops');
-        
     }
 
 
@@ -81,5 +92,4 @@ class ShopController extends Controller
 
         return view('haalathu.reports.shop', compact('shop', 'stocks'));
     }
-
 }

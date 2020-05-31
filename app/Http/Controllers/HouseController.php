@@ -36,7 +36,7 @@ class HouseController extends Controller
         ]);
 
         // dd($house_info);
-        $nid = request()->owner_nid;
+        $nid = $house_info['owner_nid'];
 
         // dd($nid);
 
@@ -50,15 +50,15 @@ class HouseController extends Controller
         // dd($owner_data);
 
         $owner = Owner::create($owner_data);
-        // dd($owner);
+        dd($owner);
         $house = [
             'owner_id' => $owner->id,
-            'name' => request()->house_name,
-            'atoll'  => request()->atoll,
-            'island'  => request()->island,
+            'name' => $house_info['house_name'],
+            'atoll'  => $house_info['atoll'],
+            'island'  => $house_info['island'],
         ];
 
-        // dd($house);
+        dd($house);
 
         House::create($house);
 
@@ -85,8 +85,8 @@ class HouseController extends Controller
         $residents = Resident::where('house_id', $house->id)->get();
 
 
-        // $people = [];
 
+        $ppl = [];
         // $totalresidents = 0;
         foreach ($residents as $resident) {
             $rperson = Person::find($resident->person_id);
@@ -97,6 +97,7 @@ class HouseController extends Controller
         $med_status = [];
         $sp_care_status = [];
         $dob_status = [];
+
         foreach ($ppl as $p) {
 
 

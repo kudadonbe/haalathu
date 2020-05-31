@@ -32,7 +32,7 @@
     </div>
     <div class="row report">
         <!-- status of residents -->
-        <div class="col-6 ppl">
+        <div class="col ppl">
             <div class="row pplHead">
                 <div class="col-1 mvicon"><img src="\img\png\haalathu\reports\family.png" style="height:20px;" alt=""></div>
                 <div class="col-9 mvdetails">މީހުން</div>
@@ -72,7 +72,7 @@
 
         <!-- status of necessities -->
 
-        <div class="col-6 goods">
+        <div class="col goods" style="display:none;">
             <div class="row goHead">
                 <div class="col-1 mvicon"><img src="\img\png\haalathu\reports\food_items.png" style="height:20px;" alt=""></div>
                 <div class="col-11 mvdetails">ކާބޯތަކެތި</div>

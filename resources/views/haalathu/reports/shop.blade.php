@@ -22,10 +22,10 @@
         </div>
         <div class="col owner">
             <div class="ownername">
-                {{$shop->person->name}}
+                {{$shop->owner->person->name}}
             </div>
             <div class="ownercontact">
-                {{$shop->person->contact}}
+                {{$shop->contact}}
             </div>
         </div>
     </div>
@@ -93,6 +93,20 @@
                 <div class="col-2 mvqtydata">50</div>
                 <div class="col-2 mvqtyunit">ދަޅު</div>
             </div>
+
+
+            <!-- 
+                <div class="col-7 mvdetails">ބޯފެން</div>
+                <div class="col-7 mvdetails">ކިރު</div>
+                <div class="col-7 mvdetails">ހަނޑޫ</div>
+                <div class="col-7 mvdetails">ހަކުރު</div>
+                <div class="col-7 mvdetails">ފުއް</div>
+                <div class="col-7 mvdetails">ފިޔާ</div>
+                <div class="col-7 mvdetails">މަސްދަޅު</div>
+                <div class="col-7 mvdetails">ގޭސް</div>
+ -->
+
+
 
         </div>
     </div>
