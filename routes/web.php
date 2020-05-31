@@ -33,8 +33,10 @@ Route::get('/haalathu/commodity/create', 'CommodityController@create')->name('ha
 Route::get('/haalathu/people', 'PersonController@index')->name('person.index');
 Route::get('/haalathu/houses', 'HouseController@index')->name('house.index');
 Route::get('/haalathu/shops', 'ShopController@index')->name('shop.index');
-Route::get('/haalathu/commodities', 'CommodityController@index')->name('Commodity.index');
-Route::get('/haalathu/{house_id}/residents', 'ResidentController@index')->name('house.index');
+Route::get('/haalathu/commodities', 'CommodityController@index')->name('commodity.index');
+Route::get('/haalathu/{house_id}/residents', 'ResidentController@index')->name('house.resident.index');
+Route::get('/haalathu/{house_id}/items', 'ItemController@index')->name('house.item.index');
+Route::get('/haalathu/{shop_id}/stocks', 'StockController@index')->name('house.stock.index');
 
 Route::get('/haalathu/person/{nid}', 'PersonController@show')->name('person.show');
 Route::get('/haalathu/house/{name}', 'HouseController@show')->name('house.show');
@@ -45,6 +47,8 @@ Route::get('/haalathu/person/{nid}/edit', 'PersonController@edit')->name('person
 Route::get('/haalathu/commodity/{name}/edit', 'CommodityController@edit')->name('commodity.edit');
 
 
+Route::post('/haalathu/shop/stock', 'StockController@store')->name('haalathu.shop.stock.store');
+Route::post('/haalathu/house/item', 'ItemController@store')->name('haalathu.house.item.store');
 Route::post('/haalathu/house/resident', 'ResidentController@store')->name('haalathu.house.resident.store');
 Route::post('/haalathu/person', 'PersonController@store')->name('haalathu.person.store');
 Route::post('/haalathu/house', 'HouseController@store')->name('haalathu.house.store');

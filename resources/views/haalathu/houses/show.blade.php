@@ -72,18 +72,21 @@
 
         <!-- status of necessities -->
 
-        <div class="col goods" style="display:none;">
+        <div class="col goods">
             <div class="row goHead">
                 <div class="col-1 mvicon"><img src="\img\png\haalathu\reports\food_items.png" style="height:20px;" alt=""></div>
                 <div class="col-11 mvdetails">ކާބޯތަކެތި</div>
+                <div class="col-2"><a href="/haalathu/{{ $house->id }}/items"><img src="\img\svg\cart3.svg" style="height:20px;" alt=""></a></div>
             </div>
+            @foreach($items as $item)
             <div class="row data">
-                <div class="col-1 mvicon"><img src="\img\png\haalathu\reports\rice.png" style="height:20px;" alt=""></div>
-                <div class="col-7 mvdetails">ހަނޑޫ
-                </div>
-                <div class="col-2 mvqtydata">50</div>
-                <div class="col-2 mvqtyunit">ކިލޯ</div>
+                <div class="col-1 mvicon"><img src="{{ $item->img_url }}" style="height:20px;" alt=""></div>
+                <div class="col-7 mvdetails">{{ $item->name }}</div>
+                <div class="col-2 mvqtydata">{{ $item->qty }}</div>
+                <div class="col-2 mvqtyunit">{{ $item->unit }}</div>
             </div>
+            @endforeach
+
         </div>
     </div>
 </div>

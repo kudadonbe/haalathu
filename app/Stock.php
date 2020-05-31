@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Stock extends Model
 {
-    // protected $guarded = [];
+    protected $guarded = [];
     public function shop()
     {
         return $this->belongsTo(Shop::class);
@@ -16,5 +16,4 @@ class Stock extends Model
     {
         return $this->hasMany(Commodity::class);
     }
-
 }

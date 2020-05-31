@@ -86,10 +86,10 @@ class ShopController extends Controller
         $stocks = DB::table('stocks')
             ->where('shop_id', '=', $shop->id)
             ->join('commodities', 'commodities.id', '=', 'stocks.commodity_id')
-            ->select('stocks.*', 'commodities.name', 'commodities.unit')
+            ->select('stocks.*', 'commodities.name', 'commodities.unit', 'commodities.img_url')
             ->get();
         // dd($stocks);
 
-        return view('haalathu.reports.shop', compact('shop', 'stocks'));
+        return view('haalathu.shops.show', compact('shop', 'stocks'));
     }
 }

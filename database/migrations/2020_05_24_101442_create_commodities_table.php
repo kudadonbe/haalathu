@@ -20,6 +20,7 @@ class CreateCommoditiesTable extends Migration
             $table->string('size')->nullable();
             $table->string('weight')->nullable();
             $table->string('use')->nullable();
+            $table->string('img_url')->nullable();
             $table->timestamps();
         });
     }

@@ -50,7 +50,6 @@ class HouseController extends Controller
         // dd($owner_data);
 
         $owner = Owner::create($owner_data);
-        dd($owner);
         $house = [
             'owner_id' => $owner->id,
             'name' => $house_info['house_name'],
@@ -58,9 +57,10 @@ class HouseController extends Controller
             'island'  => $house_info['island'],
         ];
 
-        dd($house);
 
         House::create($house);
+        // dd($owner);
+        // dd($house);
 
         return redirect('/haalathu/houses');
     }
@@ -83,7 +83,6 @@ class HouseController extends Controller
         // dd($house);
         // ppl status calcilations
         $residents = Resident::where('house_id', $house->id)->get();
-
 
 
         $ppl = [];
@@ -162,11 +161,11 @@ class HouseController extends Controller
         $items = DB::table('items')
             ->where('house_id', '=', $house->id)
             ->join('commodities', 'commodities.id', '=', 'items.commodity_id')
-            ->select('items.*', 'commodities.name', 'commodities.unit')
+            ->select('items.*', 'commodities.name', 'commodities.unit', 'commodities.img_url')
             ->get();
 
 
-
+        // dd($items);
 
         return view('haalathu.houses.show', compact('house', 'items', 'dataObj'));
     }
