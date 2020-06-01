@@ -17,10 +17,10 @@
 
 
                     <div class="row">
-                        <label for="shop_name" class="col-4">{{ __('ވިޔަފާރިގޭގެ ނަން') }}</label>
+                        <label for="name" class="col-4">{{ __('ވިޔަފާރިގޭގެ ނަން') }}</label>
                         <div class="col">
-                            <input id="shop_name" type="text" class="form-control @error('shop_name') is-invalid @enderror" name="shop_name" value="{{ old('shop_name') }}" autocomplete="shop_name" autofocus>
-                            @error('shop_name')
+                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" autocomplete="name" autofocus>
+                            @error('name')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>

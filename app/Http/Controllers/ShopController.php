@@ -39,7 +39,7 @@ class ShopController extends Controller
 
 
         $shop_info = request()->validate([
-            'shop_name' => ['required', 'unique:shops'],
+            'name' => ['required', 'unique:shops'],
             'person_nid'  => 'required',
             'atoll'  => 'required',
             'island'  => 'required',
@@ -60,7 +60,7 @@ class ShopController extends Controller
         // dd($owner);
         $shop = [
             'owner_id' => $owner->id,
-            'name' => $shop_info['shop_name'],
+            'name' => $shop_info['name'],
             'atoll' => $shop_info['atoll'],
             'island' => $shop_info['island'],
             'contact' => $shop_info['contact'],
