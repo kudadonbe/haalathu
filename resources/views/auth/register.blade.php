@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('haalathu.layouts.app')
 
 @section('content')
 <div class="container">
