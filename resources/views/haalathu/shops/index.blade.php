@@ -19,7 +19,7 @@
                 @foreach($shops as $shop)
                 <div class="row">
                     <div class="col links">
-                        <a href="/haalathu/shop/{{ $shop->name }}">
+                        <a href="/haalathu/shop/{{ $shop->id }}">
                             {{$shop->name}}
                         </a>
                     </div>

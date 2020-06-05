@@ -45,6 +45,7 @@ class HouseController extends Controller
 
         $owner_data = [
             'person_id' => $person->id,
+            'property_code' => uniqid(),
         ];
 
         // dd($owner_data);
@@ -76,13 +77,13 @@ class HouseController extends Controller
         }
     }
 
-    public function show($name)
+    public function show($id)
     {
         // dd('test');
-        $house = House::where('name', $name)->firstOrFail();
+        $house = House::find($id)->firstOrFail();
         // dd($house);
         // ppl status calcilations
-        $residents = Resident::where('house_id', $house->id)->get();
+        $residents = Resident::where('house_id', $id)->get();
 
 
         $ppl = [];
@@ -168,5 +169,68 @@ class HouseController extends Controller
         // dd($items);
 
         return view('haalathu.houses.show', compact('house', 'items', 'dataObj'));
+    }
+
+    public function edit($id)
+    {
+        // dd('in edit form');
+        // dd($nid);
+        // $house = House::where('id', $id)->firstOrFail();
+        $house = House::find($id)->firstOrFail();
+        // dd($house);
+
+        return view('haalathu.houses.edit', compact('house'));
+    }
+
+    public function update()
+    {
+        // dd('in update controller');
+        $house_info = request()->validate([
+            'house_id' => 'required',
+            'house_name' => 'required',
+            'owner_nid'  => 'required',
+            'atoll'  => 'required',
+            'island'  => 'required',
+        ]);
+
+        // dd($house_info);
+
+        $nid = $house_info['owner_nid'];
+        // dd($nid);
+
+        $person = Person::where('nid', $nid)->firstOrFail();
+
+        $house = House::find($house_info['house_id'])->firstOrFail();
+
+        $owner_id = $house->owner_id;
+
+        $owner = Owner::find($owner_id)->firstOrFail();
+
+        $old_owner = $owner->person_id;
+        $new_owner = $person->id;
+
+
+
+        if ($old_owner == $new_owner) {
+            // dd('old owner');
+        } else {
+            // dd(' a new owner');
+            $owner_data = [
+                'person_id' => $new_owner,
+            ];
+            $owner->update($owner_data);
+        }
+
+        $house_data = [
+            'name' => $house_info['house_name'],
+            'atoll'  => $house_info['atoll'],
+            'island'  => $house_info['island'],
+        ];
+
+
+        $house->update($house_data);
+        $path = '/haalathu/house/' . $house->id;
+        // dd($path);
+        return redirect($path);
     }
 }

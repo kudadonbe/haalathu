@@ -19,7 +19,7 @@
                 @foreach($houses as $house)
                 <div class="row">
                     <div class="col links">
-                        <a href="/haalathu/house/{{ $house->name }}">
+                        <a href="/haalathu/house/{{ $house->id }}">
                             {{$house->name}}
                         </a>
                     </div>
@@ -28,12 +28,12 @@
                 </div>
                 @endforeach
                 <div class="row links">
-                <a href="/haalathu/house/create">+</a>
-            </div>
+                    <a href="/haalathu/house/create">+</a>
+                </div>
 
 
             </fieldset>
-            
+
         </div>
         <div class="col-3"></div>
     </div>

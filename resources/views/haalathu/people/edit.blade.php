@@ -114,21 +114,39 @@
                     <div class="row">
                         <label for="med" class="col-4">{{ __('ދާއިމީގޮތެއްގައި ބޭސްކާ ބަލިމީހެއް:') }}</label>
                         <div class="col">
-                            <input type="checkbox" id="med" name="med" value="1">
+                            <div class="row">
+                                <label for="no">ނޫން</label>
+                                <input type="radio" id="no" name="med" value="0">
+                                <label for="yes" style="padding-right: 1vh">އާދެ</label>
+                                <input type="radio" id="yes" name="med" value="1">
+                            </div>
+                            <!-- <input type="checkbox" id="med" name="med" value="1"> -->
                         </div>
                     </div>
                     @if ($person->gender)
                     <div class="row">
                         <label for="preg" class="col-4">{{ __('މާބަނޑުމީހެއް:') }}</label>
                         <div class="col">
-                            <input type="checkbox" id="preg" name="preg" value="1">
+                            <div class="row">
+                                <label for="no">ނޫން</label>
+                                <input type="radio" id="no" name="preg" value="0">
+                                <label for="yes" style="padding-right: 1vh">އާދެ</label>
+                                <input type="radio" id="yes" name="preg" value="1">
+                            </div>
+                            <!-- <input type="checkbox" id="preg" name="preg" value="1"> -->
                         </div>
                     </div>
                     @endif
                     <div class="row">
                         <label for="sp_care" class="col-4">{{ __('ޚާއްޞަ އެހީއަށް ބޭނުންވާ މީހެއް:') }}</label>
                         <div class="col">
-                            <input type="checkbox" id="sp_care" name="sp_care" value="1">
+                            <div class="row">
+                                <label for="no">ނޫން</label>
+                                <input type="radio" id="no" name="sp_care" value="0">
+                                <label for="yes" style="padding-right: 1vh">އާދެ</label>
+                                <input type="radio" id="yes" name="sp_care" value="1">
+                            </div>
+                            <!-- <input type="checkbox" id="sp_care" name="sp_care" value="1"> -->
                         </div>
                     </div>
                     <div class="row">

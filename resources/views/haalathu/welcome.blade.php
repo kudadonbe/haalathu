@@ -171,6 +171,7 @@
             color: #BC7701;
         }
     </style>
+
 </head>
 
 <body>
@@ -220,7 +221,7 @@
                         ގޭބިސީތައް
                     </div>
                 </div>
-                <div class="col good">
+                <div class="col good" style="display: none;">
                     <div class="pageimage">
                         <a href="/haalathu/commodities">
                             <svg class="bi bi-cart3" width="5em" height="5em" viewBox="0 0 16 16" fill="#007850" xmlns="http://www.w3.org/2000/svg">

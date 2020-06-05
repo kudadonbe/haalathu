@@ -39,11 +39,12 @@ Route::get('/haalathu/{house_id}/items', 'ItemController@index')->name('house.it
 Route::get('/haalathu/{shop_id}/stocks', 'StockController@index')->name('house.stock.index');
 
 Route::get('/haalathu/person/{nid}', 'PersonController@show')->name('person.show');
-Route::get('/haalathu/house/{name}', 'HouseController@show')->name('house.show');
-Route::get('/haalathu/shop/{name}', 'ShopController@show')->name('shop.show');
+Route::get('/haalathu/house/{id}', 'HouseController@show')->name('house.show');
+Route::get('/haalathu/shop/{id}', 'ShopController@show')->name('shop.show');
 Route::get('/haalathu/commodity/{name}', 'CommodityController@show')->name('commodity.show');
 
 Route::get('/haalathu/person/{nid}/edit', 'PersonController@edit')->name('person.edit');
+Route::get('/haalathu/house/{id}/edit', 'HouseController@edit')->name('house.edit');
 Route::get('/haalathu/commodity/{name}/edit', 'CommodityController@edit')->name('commodity.edit');
 
 
@@ -56,4 +57,5 @@ Route::post('/haalathu/commodity', 'CommodityController@store')->name('haalathu.
 Route::post('/haalathu/shop', 'ShopController@store')->name('haalathu.shop.store');
 
 Route::patch('/haalathu/person/{nid}', 'PersonController@update')->name('haalathu.person.update');
+Route::patch('/haalathu/house/{id}', 'HouseController@update')->name('haalathu.house.update');
 Route::patch('/haalathu/commodity/{name}', 'CommodityController@update')->name('commodity.update');
