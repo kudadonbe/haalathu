@@ -23,6 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home.index');
 Route::get('/haalathu', 'PublicController@haalathu')->name('haalathu');
 Route::get('/haalathu/home', 'haalathuController@index')->name('haalathu.home.index');
 Route::get('/bayaan', 'PublicController@bayaan')->name('iquraaru');
+Route::get('/namaadhu', 'PublicController@apps')->name('apps');
 
 
 Route::get('/haalathu/person/create', 'PersonController@create')->name('haalathu.person.create');

@@ -46,8 +46,8 @@
         }
 
         input[type=text] {
-            padding: 10px;
-            margin: 10px 0;
+            padding: 10em;
+            margin: 10em 0;
             border-radius: 5px;
             text-align: center;
             background: none;
@@ -56,8 +56,8 @@
         }
 
         input[type=password] {
-            padding: 10px;
-            margin: 10px 0;
+            padding: 10em;
+            margin: 10em 0;
             border-radius: 5px;
             /* border: 1,1,1,0; */
             text-align: center;
@@ -75,7 +75,7 @@
             background-color: lightblue;
             color: #636b6f;
             /* font-weight: 600; */
-            border-radius: 5px;
+            border-radius: 5em;
             width: 100%;
             margin: 10px 0;
 
@@ -88,7 +88,7 @@
         /* Create three unequal cols that floats next to each other */
         .col {
             width: 100%;
-            padding: 5px;
+            padding: 5vw;
             text-align: center;
 
             /* background-color: beige; for dev */
@@ -152,7 +152,7 @@
         .col-9,
         .col-10,
         .col-11 {
-            padding: 5px;
+            padding: 5vw;
         }
 
         .row {
@@ -180,12 +180,11 @@
 
         }
 
-
         .people,
         .geybisee,
         .goods,
         .viyaa {
-            padding: 6vh;
+            padding: 4vw;
         }
     </style>
 
@@ -209,7 +208,7 @@
             <div class="col people">
                 <div class="pageimage">
                     <a href="/haalathu/people">
-                        <svg class="bi bi-people" width="5em" height="5em" viewBox="0 0 16 16" fill="#007850" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="bi bi-people" width="10vw" height="10vw" viewBox="0 0 16 16" fill="#007850" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.995-.944v-.002.002zM7.022 13h7.956a.274.274 0 0 0 .014-.002l.008-.002c-.002-.264-.167-1.03-.76-1.72C13.688 10.629 12.718 10 11 10c-1.717 0-2.687.63-3.24 1.276-.593.69-.759 1.457-.76 1.72a1.05 1.05 0 0 0 .022.004zm7.973.056v-.002.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10c-1.668.02-2.615.64-3.16 1.276C1.163 11.97 1 12.739 1 13h3c0-1.045.323-2.086.92-3zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" />
                         </svg>
                     </a>
@@ -223,7 +222,7 @@
                 <div class="pageimage">
                     <a href="/haalathu/houses">
                         <!-- <img src="\img\png\haalathu\home.png" style="height:70px;" alt=""> -->
-                        <svg class="bi bi-house-door" width="5em" height="5em" viewBox="0 0 16 16" fill="#007850" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="bi bi-house-door" width="10vw" height="10vw" viewBox="0 0 16 16" fill="#007850" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z" />
                             <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
                         </svg>
@@ -236,7 +235,7 @@
             <div class="col goods" style="display: none;">
                 <div class="pageimage">
                     <a href="/haalathu/commodities">
-                        <svg class="bi bi-cart3" width="5em" height="5em" viewBox="0 0 16 16" fill="#007850" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="bi bi-cart3" width="10vw" height="10vw" viewBox="0 0 16 16" fill="#007850" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
                         </svg>
                     </a>
@@ -250,7 +249,7 @@
                 <div class="pageimage">
                     <a href="/haalathu/shops">
                         <!-- <img src="\img\png\haalathu\shop.png" style="height:70px;" alt=""> -->
-                        <svg class="bi bi-shop" width="5em" height="5em" viewBox="0 0 16 16" fill="#007850" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="bi bi-shop" width="10vw" height="10vw" viewBox="0 0 16 16" fill="#007850" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M0 15.5a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zM3.12 1.175A.5.5 0 0 1 3.5 1h9a.5.5 0 0 1 .38.175l2.759 3.219A1.5 1.5 0 0 1 16 5.37v.13h-1v-.13a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.13H0v-.13a1.5 1.5 0 0 1 .361-.976l2.76-3.22z" />
                             <path d="M2.375 6.875c.76 0 1.375-.616 1.375-1.375h1a1.375 1.375 0 0 0 2.75 0h1a1.375 1.375 0 0 0 2.75 0h1a1.375 1.375 0 1 0 2.75 0h1a2.375 2.375 0 0 1-4.25 1.458 2.371 2.371 0 0 1-1.875.917A2.37 2.37 0 0 1 8 6.958a2.37 2.37 0 0 1-1.875.917 2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.5h1c0 .76.616 1.375 1.375 1.375z" />
                             <path d="M4.75 5.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm3.75 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm3.75 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />

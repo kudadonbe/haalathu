@@ -15,7 +15,8 @@ class PublicController extends Controller
     {
         return view('bayaan');
     }
-  
-
-    
+    public function apps()
+    {
+        return view('namaadhu.welcome');
+    }
 }

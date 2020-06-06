@@ -3,7 +3,6 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-3"></div>
         <div class="col">
             <fieldset>
                 <legend>
@@ -28,14 +27,13 @@
                 </div>
                 @endforeach
                 <div class="row links">
-                <a href="/haalathu/person/create">+</a>
-            </div>
+                    <a href="/haalathu/person/create">+</a>
+                </div>
 
 
             </fieldset>
-            
+
         </div>
-        <div class="col-3"></div>
     </div>
 
 </div>
