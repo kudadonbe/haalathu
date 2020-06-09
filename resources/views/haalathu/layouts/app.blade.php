@@ -49,22 +49,22 @@
 
         .basmala {
             font-family: "A_Bismillah";
-            font-size: 50vh;
+            font-size: 1rem;
             text-align: center;
 
         }
 
         .ar {
             font-family: "Calibri";
-            font-size: 20vh;
+            font-size: 1rem;
 
         }
 
         .mv {
             text-align: justify;
-            text-indent: 50vw;
-            padding-left: 5vh;
-            padding-right: 5vh;
+            text-indent: 1rem;
+            padding-left: 1em;
+            padding-right: 0.3em;
             line-height: 2.5;
         }
 
@@ -73,7 +73,6 @@
         }
 
         .mvdate {
-            /* font-family: "MV Typewriter"; */
             text-align: center;
 
 
@@ -85,7 +84,7 @@
 
         .col {
             width: 100%;
-            padding: 5px;
+            padding: 0.3em;
             /* background-color: beige; for dev */
             /* float: left; */
             /* height: 300px; */
@@ -94,47 +93,39 @@
         }
 
         .col-1 {
-            width: 8.33%;
+            width: 10%;
         }
 
         .col-2 {
-            width: 16.6667%;
+            width: 20%;
         }
 
         .col-3 {
-            width: 25%;
+            width: 30%;
         }
 
         .col-4 {
-            width: 33%;
+            width: 40%;
         }
 
         .col-5 {
-            width: 41.667%;
-        }
-
-        .col-6 {
             width: 50%;
         }
 
+        .col-6 {
+            width: 60%;
+        }
+
         .col-7 {
-            width: 58.33%;
+            width: 70%;
         }
 
         .col-8 {
-            width: 66.6667%;
+            width: 80%;
         }
 
         .col-9 {
-            width: 75%;
-        }
-
-        .col-10 {
-            width: 83%;
-        }
-
-        .col-11 {
-            width: 91.667%;
+            width: 90%;
         }
 
         .col-1,
@@ -145,10 +136,8 @@
         .col-6,
         .col-7,
         .col-8,
-        .col-9,
-        .col-10,
-        .col-11 {
-            padding: 5px;
+        .col-9 {
+            padding: 0.3em;
         }
 
         .row {
@@ -161,7 +150,7 @@
         ul {
             list-style-type: none;
             margin: 0;
-            padding: 5px;
+            padding: 0.3em;
         }
 
         .barnav {
@@ -190,7 +179,7 @@
         }
 
         .repnametext {
-            font-size: 25vw;
+            font-size: 2rem;
             font-weight: bold;
         }
 
@@ -202,8 +191,8 @@
 
 
         input[type=text] {
-            padding: 10px;
-            margin: 10px 0;
+            padding: 0.3em;
+            margin: 0.3em 0;
             border-radius: 5px;
             text-align: right;
             background: none;
@@ -214,7 +203,7 @@
         }
 
         input[type=password] {
-            padding: 10px;
+            padding: 0.3em;
             margin: 10px 0;
             border-radius: 5px;
             /* border: 1,1,1,0; */
@@ -225,7 +214,7 @@
         }
 
         input[type=email] {
-            padding: 10px;
+            padding: 0.3em;
             margin: 10px 0;
             border-radius: 5px;
             /* border: 1,1,1,0; */
@@ -250,11 +239,11 @@
             appearance: none;
             -webkit-appearance: none;
             /* usual styles */
-            padding: 10px;
+            padding: 0.3em;
             border: none;
             background-color: lightblue;
             color: #636b6f;
-            font-weight: 600;
+            font-weight: 300;
             border-radius: 5px;
             /* width: 100%; */
             margin: 10px 0;
@@ -283,7 +272,7 @@
 
 
         .container {
-            padding: 3vh;
+            padding: 0.3em;
         }
 
         .logout svg {
@@ -304,14 +293,14 @@
         }
 
         .userlogo {
-            padding: 0vh;
+            padding: 0.1em;
             display: block;
 
         }
 
         .username {
-            font-size: 3vmin;
-            padding-right: 2vh;
+            font-size: 0.8rem;
+            padding-right: 1em;
             /* background-color: red; */
 
         }
@@ -328,7 +317,7 @@
 
         .copyright {
             font-family: 'Consolas';
-            font-size: 2vw;
+            font-size: 0.5em;
             text-align: center;
         }
     </style>
