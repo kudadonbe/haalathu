@@ -80,7 +80,7 @@ class HouseController extends Controller
     public function show($id)
     {
         // dd('test');
-        $house = House::find($id)->firstOrFail();
+        $house = House::findorFail($id);
         // dd($house);
         // ppl status calcilations
         $residents = Resident::where('house_id', $id)->get();
