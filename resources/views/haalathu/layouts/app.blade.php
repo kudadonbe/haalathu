@@ -196,7 +196,7 @@
             padding: 0.3em;
             margin: 0.3em 0;
             border-radius: 5px;
-            text-align: right;
+            text-align: center;
             background: none;
             border: 1px solid lightblue;
             width: 100%;
@@ -206,24 +206,26 @@
 
         input[type=password] {
             padding: 0.3em;
-            margin: 10px 0;
+            margin: 0.3em 0;
             border-radius: 5px;
             /* border: 1,1,1,0; */
             text-align: center;
             background: none;
             border: 1px solid lightblue;
             width: 100%;
+            font-family: "Dhivehi";
         }
 
         input[type=email] {
             padding: 0.3em;
-            margin: 10px 0;
+            margin: 0.3em 0;
             border-radius: 5px;
             /* border: 1,1,1,0; */
-            text-align: right;
+            text-align: center;
             background: none;
             border: 1px solid lightblue;
             width: 100%;
+            font-family: "Dhivehi";
         }
 
         fieldset {

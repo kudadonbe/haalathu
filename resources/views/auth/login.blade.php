@@ -13,7 +13,7 @@
                         <div class="row">
                             <label for="username" class="col-4">{{ __('ޔޫސާރ އައިޑީ:') }}</label>
                             <div class="col">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="username" value="{{ old('username') }}" autocomplete="username" autofocus>
+                                <input dir="ltr" id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" autocomplete="username" autofocus>
 
                                 @error('username')
                                 <span class="invalid-feedback" role="alert">
@@ -26,7 +26,7 @@
                             <label for="password" class="col-4">{{ __('ޕާސްވޯޑު:') }}</label>
 
                             <div class="col">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password">
+                                <input dir="ltr" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password">
 
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">

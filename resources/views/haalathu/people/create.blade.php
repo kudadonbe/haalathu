@@ -18,7 +18,7 @@
                     <div class="row">
                         <label for="nid" class="col-4">{{ __('އައިޑީ ނަންބަރު:') }}</label>
                         <div class="col">
-                            <input id="nid" type="text" class="form-control @error('nid') is-invalid @enderror" name="nid" value="{{ old('nid') }}" autocomplete="nid" autofocus>
+                            <input dir="ltr" id="nid" type="text" class="form-control @error('nid') is-invalid @enderror" name="nid" value="{{ old('nid') }}" autocomplete="nid" autofocus>
 
                             @error('nid')
                             <span class="invalid-feedback" role="alert">
@@ -55,9 +55,7 @@
                             <div class="row">
                                 <label for="house" class="col-4">{{ __('ގޭގެ ނަން:') }}</label>
                                 <div class="col">
-                                    <input id="house" type="text" 
-                                    class="form-control @error('house') is-invalid @enderror" 
-                                    name="house" value="{{ old('house') }}" autocomplete="house" autofocus>
+                                    <input id="house" type="text" class="form-control @error('house') is-invalid @enderror" name="house" value="{{ old('house') }}" autocomplete="house" autofocus>
                                     @error('house')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
