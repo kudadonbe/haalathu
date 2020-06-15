@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\House;
 use App\Person;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Redirect;
 
@@ -20,7 +21,7 @@ class PersonController extends Controller
         // dd($people);
         return view('haalathu.people.index', compact('people'));
     }
-    
+
     public function create()
     {
         // dd("in create form");
@@ -53,9 +54,12 @@ class PersonController extends Controller
     public function show($nid)
     {
         $person = Person::where('nid', $nid)->firstOrFail();
-        // dd($person);
 
-        return view('haalathu.people.show', compact('person'));
+
+        $age = Carbon::parse($person->dob)->age;
+        // dd($age);
+
+        return view('haalathu.people.show', compact('person', 'age'));
     }
 
     public function edit($nid)

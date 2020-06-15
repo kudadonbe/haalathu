@@ -12,8 +12,7 @@
                 </legend>
                 <div class="row">
                     <div class="col"><strong> ނަން</strong> </div>
-                    <div class="col"><strong>ގުޅޭނެ ނަންބަރު</strong></div>
-                    <div class="col"><strong>އައިޑީ ކާޑު ނަންބަރު</strong></div>
+                    <div class="col"><strong> ދާއިމީ އެޑްރެސް</strong> </div>
                 </div>
                 @foreach($people as $person)
                 <div class="row">
@@ -22,8 +21,7 @@
                             {{$person->name}}
                         </a>
                     </div>
-                    <div class="col">{{$person->contact}}</div>
-                    <div class="col">{{$person->nid}}</div>
+                    <div class="col"><span>{{$person->house}}</span>، <span>{{$person->atoll}}</span> {{$person->island}}<span></span></div>
                 </div>
                 @endforeach
                 <div class="row links">

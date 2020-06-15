@@ -43,9 +43,11 @@
             color: #636b6f;
             font-family: 'Dhivehi', 'Nunito', sans-serif;
             font-weight: 200;
+            /* font-size: 16px; */
             height: 100vh;
             margin: 0;
         }
+
 
         .basmala {
             font-family: "A_Bismillah";
@@ -320,6 +322,13 @@
             font-size: 0.5em;
             text-align: center;
         }
+
+        /* @media (max-widht: 670px) {
+            body {
+                font-size: 4px;
+                background-color: red;
+            }
+        } */
     </style>
 </head>
 
