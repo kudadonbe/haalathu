@@ -23,16 +23,16 @@ class CommodityController extends Controller
         $commodity = request()->validate([
             'name' => ['required', 'unique:commodities'],
             'unit' => 'required',
+            'img_url' => 'required',
             // 'size' => 'required',
             // 'weight'  => 'required',
         ]);
 
-        // dd($commodity);
+        dd($commodity);
 
-        Commodity::create($commodity);
+        // Commodity::create($commodity);
 
         return redirect('/haalathu/commodities');
-        
     }
 
     public function index()
@@ -45,7 +45,7 @@ class CommodityController extends Controller
     public function show($name)
     {
         $commodity = Commodity::where('name', $name)->firstOrFail();
-        
+
         // dd($commodity);
 
         return view('haalathu.commodities.show', compact('commodity'));
@@ -53,11 +53,11 @@ class CommodityController extends Controller
 
     public function edit($name)
     {
-        
+
         // dd($name);
         $commodity = Commodity::where('name', $name)->firstOrFail();
         // dd($commodity);
-        
+
         return view('haalathu.commodities.edit', compact('commodity'));
     }
 
@@ -68,20 +68,19 @@ class CommodityController extends Controller
         $commodity_update = request()->validate([
             'name' => 'required',
             'unit' => 'required',
+            'img_url' => '',
         ]);
 
-        // dd($commodity_update);
+        dd($commodity_update);
 
         $commodity = Commodity::where('name', $name)->firstOrFail();
-        
+
         // dd($commodity);
         // dd($commodity->name);
-        
+
         $commodity->update($commodity_update);
         $path = '/haalathu/commodity/' . $commodity->name;
 
         return Redirect($path);
     }
-
-
 }

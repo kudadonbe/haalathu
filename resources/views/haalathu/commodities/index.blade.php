@@ -3,7 +3,6 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-3"></div>
         <div class="col">
             <fieldset>
                 <legend>
@@ -19,25 +18,29 @@
                 </div>
                 @foreach($commodities as $commodity)
                 <div class="row">
+                    <img src="" alt="" style="height: 1rem;">
                     <div class="col links">
                         <a href="/haalathu/commodity/{{ $commodity->name }}">
-                        {{$commodity->name}}
+                            {{$commodity->name}}
                         </a>
+                        <span>
+                            {{$commodity->img_url}}
+                        </span>
                     </div>
-                    <!-- <div class="col">{{$commodity->size}}</div> -->
+                    <!-- <div class=" col">{{$commodity->size}}</div> -->
                     <!-- <div class="col">{{$commodity->weight}}</div> -->
                     <div class="col">{{$commodity->unit}}</div>
                 </div>
                 @endforeach
                 <div class="row links">
-                <a href="/haalathu/commodity/create">+</a>
-            </div>
+                    <a href="/haalathu/commodity/create">+</a>
+                </div>
 
 
             </fieldset>
-            
+
         </div>
-        <div class="col-3"></div>
+
     </div>
 
 </div>
