@@ -28,9 +28,9 @@ class CommodityController extends Controller
             // 'weight'  => 'required',
         ]);
 
-        dd($commodity);
+        // dd($commodity);
 
-        // Commodity::create($commodity);
+        Commodity::create($commodity);
 
         return redirect('/haalathu/commodities');
     }
@@ -71,7 +71,7 @@ class CommodityController extends Controller
             'img_url' => '',
         ]);
 
-        dd($commodity_update);
+        // dd($commodity_update);
 
         $commodity = Commodity::where('name', $name)->firstOrFail();
 

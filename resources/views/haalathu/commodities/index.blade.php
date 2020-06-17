@@ -18,16 +18,13 @@
                 </div>
                 @foreach($commodities as $commodity)
                 <div class="row">
-                    <img src="" alt="" style="height: 1rem;">
-                    <div class="col links">
+                    <div class=" col links">
                         <a href="/haalathu/commodity/{{ $commodity->name }}">
-                            {{$commodity->name}}
+                            <img src="{{$commodity->img_url}}" alt="" style="height: 1rem;">
                         </a>
-                        <span>
-                            {{$commodity->img_url}}
-                        </span>
-                    </div>
+                        <span> {{$commodity->name}} </span></div>
                     <!-- <div class=" col">{{$commodity->size}}</div> -->
+
                     <!-- <div class="col">{{$commodity->weight}}</div> -->
                     <div class="col">{{$commodity->unit}}</div>
                 </div>

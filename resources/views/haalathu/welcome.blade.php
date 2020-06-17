@@ -233,7 +233,7 @@
                 </div>
             </div>
             <!-- <div class="col goods" style="display: none;"> -->
-            <div class="col goods">
+            <div class="col goods" style="display: none;">
                 <div class="pageimage">
                     <a href="/haalathu/commodities">
                         <svg class="bi bi-cart3" width="10vw" height="10vw" viewBox="0 0 16 16" fill="#007850" xmlns="http://www.w3.org/2000/svg">

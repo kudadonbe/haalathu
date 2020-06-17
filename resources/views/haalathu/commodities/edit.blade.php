@@ -38,7 +38,7 @@
                     <div class="row">
                         <label for="img_url" class="col-4">{{ __('ތަސްވީރު') }}</label>
                         <div class="col">
-                            <input id="img_url" type="text" class="form-control @error('img_url') is-invalid @enderror" name="img_url" value="{{ old('img_url') ?? $commodity->img_url }}" autocomplete="img_url" autofocus>
+                            <input dir="ltr" id="img_url" type="text" class="form-control @error('img_url') is-invalid @enderror" name="img_url" value="{{ old('img_url') ?? $commodity->img_url }}" autocomplete="img_url" autofocus>
                             @error('img_url')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
