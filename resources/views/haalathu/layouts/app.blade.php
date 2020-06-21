@@ -29,12 +29,12 @@
 
 <body>
     <main>
-        <div class="row navibar">
+        <div class="row barnav">
             <!-- Authentication Links -->
             @guest
 
             <div class="col logo">
-                <a href="/haalathu"><img src="\img\png\haalathu\logo.png" alt=""></a>
+                <a href="/haalathu"><img src="\img\png\haalathu\logo.png" style="height: 1em;" alt=""></a>
             </div>
 
             @if (Route::has('register'))
@@ -51,9 +51,9 @@
                 </div>
             </div>
             <div class="col logo">
-                <a href="/haalathu"><img src="\img\png\haalathu\logo.png" alt=""></a>
+                <a href="/haalathu"><img src="\img\png\haalathu\logo.png" style="height: 1em;" alt=""></a>
             </div>
-            <div class="col logout">
+            <div class=" col logout">
                 <a class="" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                     <svg class="bi bi-box-arrow-left" width="1em" height="1em" viewBox="0 0 16 16" fill="#007850" xmlns="http://www.w3.org/2000/svg">

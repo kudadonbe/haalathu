@@ -30,7 +30,7 @@
             </div>
         </div>
     </div>
-    <div class="row report">
+    <div class="columns report">
         <!-- status of residents -->
         <div class="col ppl">
             <div class="row pplHead">
@@ -69,9 +69,7 @@
                 <div class="col-2 mvqtydata">{{ $dataObj->get('sp_care') }}</div>
             </div>
         </div>
-
         <!-- status of necessities -->
-
         <div class="col goods">
             <div class="row goHead">
                 <div class="col-1 mvicon"><img src="\img\png\haalathu\reports\food_items.png" style="height:20px;" alt=""></div>

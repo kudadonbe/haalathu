@@ -3,7 +3,6 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-3"></div>
         <div class="col">
             <fieldset>
                 <legend>
@@ -30,12 +29,8 @@
                 <div class="row links">
                     <a href="/haalathu/house/create">+</a>
                 </div>
-
-
             </fieldset>
-
         </div>
-        <div class="col-3"></div>
     </div>
 
 </div>

@@ -3,7 +3,6 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-3"></div>
         <div class="col">
             <fieldset>
                 <legend>
@@ -13,8 +12,8 @@
                 </legend>
                 <div class="row">
                     <div class="col"><strong> ނަން</strong> </div>
-                    <div class="col"><strong>ވެރިފަރާތުގެ ނަން</strong></div>
-                    <div class="col"><strong>ވެރިފަރާތަށް ގުޅޭނެ ނަންބަރު</strong></div>
+                    <div class="col"><strong>ވެރިފަރާތް</strong></div>
+                    <div class="col"><strong>ގުޅޭނެ ނަންބަރު</strong></div>
                 </div>
                 @foreach($shops as $shop)
                 <div class="row">
@@ -35,7 +34,6 @@
             </fieldset>
 
         </div>
-        <div class="col-3"></div>
     </div>
 
 </div>
