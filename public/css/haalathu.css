@@ -15,9 +15,39 @@ body {
     color: #636b6f;
     font-family: "Dhivehi", "Nunito", sans-serif;
     font-weight: 200;
-    /* font-size: 16px; */
+    font-size: 1rem;
     height: 100vh;
     margin: 0;
+}
+header {
+    padding: 0.3em;
+}
+
+.name {
+    text-align: center;
+    font-family: "Calibri";
+    font-size: 2rem;
+}
+
+.links img {
+    height: 2em;
+    /* padding: 1rem; */
+}
+
+.links > a {
+    color: #636b6f;
+    /* padding: 0 25px; */
+    /* font-size: 13px; */
+    /* font-weight: 600; */
+    /* letter-spacing: .1rem; */
+    /* text-decoration: none; */
+    /* text-transform: uppercase; */
+}
+
+.links {
+    display: flex;
+    /* margin: 0, auto; */
+    /* align-content: space-between; */
 }
 
 .basmala {
@@ -150,10 +180,16 @@ ul {
     /* background-color: grey; */
     display: block;
     /* padding: 1vh; */
-    height: 3em;
+    height: 8em;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 100%;
 }
+.slogan {
+    text-align: center;
+    font-size: 2.5em;
+}
+
 .logout svg {
     float: left;
 }
@@ -250,16 +286,6 @@ button:hover {
     color: white;
 }
 
-.links > a {
-    color: #636b6f;
-    /* padding: 0 25px; */
-    /* font-size: 13px; */
-    /* font-weight: 600; */
-    /* letter-spacing: .1rem; */
-    text-decoration: none;
-    /* text-transform: uppercase; */
-}
-
 .pagename {
     color: #bc7701;
 }
@@ -273,13 +299,26 @@ button:hover {
     font-size: 0.5em;
     text-align: center;
 }
+p {
+    text-align: justify;
+}
+footer {
+    display: flex;
+    justify-content: space-around;
+}
 
 @media screen and (max-width: 600px) {
     body {
         /* background-color: lightgreen; */
-        font-size: 0.8rem;
+        font-size: 1rem;
+        padding: 1em;
     }
     .columns {
         flex-direction: column;
+    }
+    .phoneDisplay {
+        font-size: 1rem;
+        /* background-color: lightgreen; */
+        line-height: 2rem;
     }
 }

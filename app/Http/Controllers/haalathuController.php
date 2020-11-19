@@ -16,17 +16,16 @@ class haalathuController extends Controller
     {
         return view('haalathu.home');
     }
-    
+
     public function report($report)
     {
         // $house = House::find(1);
         // dd($house->name);
 
-        
+
 
         if ($report == "shop") {
             return view('haalathu.reports.shop');
-
         } elseif ($report == "house") {
 
 

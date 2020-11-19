@@ -19,6 +19,8 @@ class PersonController extends Controller
     {
         $people = Person::all();
         // dd($people);
+
+        // return compact('people');
         return view('haalathu.people.index', compact('people'));
     }
 

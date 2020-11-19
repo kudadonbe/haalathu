@@ -81,7 +81,7 @@ class ShopController extends Controller
     public function show($id)
     {
 
-        $shop = Shop::find($id)->firstOrFail();
+        $shop = Shop::findOrFail($id);
 
         $stocks = DB::table('stocks')
             ->where('shop_id', '=', $shop->id)
